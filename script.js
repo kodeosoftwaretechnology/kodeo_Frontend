@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const formData = new FormData(form);
 
     try {
-      const response = await fetch("http://localhost:3090/api/career", {
+      const response = await fetch("https://kodeo-backend.onrender.com/api/career", {
         method: "POST",
         body: formData,
       });
@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     try {
-      const response = await fetch("http://localhost:3090/api/contact", {
+      const response = await fetch("https://kodeo-backend.onrender.com/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
