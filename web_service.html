@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kodeo | Mobile App Development</title>
+  <link rel="icon" type="image/gif" href="logo.gif" />
+  <link rel="stylesheet" href="web.css" />
+  <link rel="stylesheet" href="services.css">
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="footer.css">
+  <script src="script.js" defer></script>
+</head>
+
+<!-- Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<body>
+    <header>
+        <nav class="navbar">
+          <ul class="nav-left">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./services.html">Services</a></li>
+            <li><a href="./career.html">Career</a></li>
+          </ul>
+      
+          <a href="index.html" class="logo">
+            <img src="logo.gif" alt="Kodeo Logo" class="logo-gif" />
+          </a>
+      
+          <ul class="nav-right">
+            <li><a href="./products.html">Product</a></li>
+            <li><a class="active" href="#hero">About-Us</a></li>
+            <li><a href="./contact_us.html">Contact</a></li>
+          </ul>
+      
+          <!-- Hamburger for Mobile -->
+          <div class="hamburger" onclick="toggleMenu()">
+            <span></span><span></span><span></span>
+          </div>
+        </nav>
+      
+        <!-- Mobile menu links -->
+        <div class="mobile-menu" id="mobileMenu">
+          <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="./services.html">Services</a></li>
+            <li><a href="./career.html">Career</a></li>
+            <li><a href="./products.html">Product</a></li>
+            <li><a href="./about_us.html">About Us</a></li>
+            <li><a href="./contact_us.html">Contact</a></li>
+          </ul>
+        </div>
+      </header>
+
+  <section class="hero animate fade-up">
+    <div class="hero-content">
+      <h1>Software  Development</h1>
+      <p>We specialize in creating custom, responsive, and high-performance websites that provide seamless user experiences across all devices. From intuitive user interfaces to powerful backend systems, we build web applications tailored to meet your business needs and drive growth.</p>
+      <a href="#get-started" class="cta-btn">Get Started</a>
+    </div>
+    <div class="hero-img">
+      <img src="assets/img/Images/web1.svg" alt="Mobile Dev Illustration">
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="content-block">
+      <h2>Overview</h2>
+      <p>We build next-gen web solutions tailored to your unique business goals. From intuitive UI/UX design to robust backend architecture, our websites and web applications combine performance, usability, and scalability.</p>
+    </div>
+  </section>
+  <!-- Android App Development Section -->
+  <section class="app-development-section">
+    <div class="app-content">
+      <h2>Frontend Web Development</h2>
+      <p>Building responsive, visually engaging websites with seamless user experiences using the latest frontend technologies like HTML, CSS, and JavaScript frameworks.</p>
+      <a href="#">View Details →</a>
+    </div>
+    <div class="app-image">
+      <img src="assets/img/Images/web2.svg" alt="Android App Development">
+    </div>
+  </section>
+
+  <!-- iOS App Development Section -->
+  <section class="app-development-section">
+    <div class="app-content">
+      <h2>Backend Web Development</h2>
+      <p>Robust and scalable backend solutions built with modern technologies like Node.js, Python, and PHP to ensure high performance and security.</p>
+      <a href="#">View Details →</a>
+    </div>
+    <div class="app-image">
+      <img src="assets/img/Images/web3.svg" alt="iOS App Development">
+    </div>
+  </section>
+
+  <!-- Cross-Platform Apps Section -->
+  <section class="app-development-section">
+    <div class="app-content">
+      <h2>Full Stack Web Development</h2>
+      <p>Comprehensive solutions combining both frontend and backend development to create complete, integrated web applications.</p>
+      <a href="#">View Details →</a>
+    </div>
+    <div class="app-image">
+      <img src="assets/img/Images/web4.svg" alt="Cross Platform Apps">
+    </div>
+  </section>
+
+  <!-- Cloud-Enabled Backend Section -->
+  <section class="app-development-section">
+    <div class="app-content">
+      <h2>E-Commerce Web Development</h2>
+      <p>Custom e-commerce platforms designed for high conversions, providing secure payment integration, product management, and smooth user experiences for online stores.</p>
+      <a href="#">View Details →</a>
+    </div>
+    <div class="app-image">
+      <img src="assets/img/Images/web5.svg" alt="Cloud-Enabled Backend">
+    </div>
+  </section>
+
+
+  <section class="tech-stack">
+    <h2>Web Development Expertise</h2>
+    <ul>
+      <li>HTML5</li>
+      <li>CSS3 / SCSS</li>
+      <li>JavaScript (ES6+)</li>
+      <li>React.js / Angular / Vue.js</li>
+      <li>Node.js / Express.js</li>
+      <li>PHP / Laravel / Symfony</li>
+      <li>Python / Django / Flask</li>
+      <li>MySQL / PostgreSQL / MongoDB</li>
+      <li>RESTful APIs / GraphQL</li>
+      <li>Git / GitHub / GitLab</li>
+    </ul>
+  </section>
+  
+
+  <section class="development-process animate fade-up">
+    <div class="video-background">
+      <video autoplay loop muted>
+        <source src="hero1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    
+    <h2>Development Process</h2>
+    <div class="timeline">
+      
+      <!-- Step 1: Discovery -->
+      <div class="step">
+        <div class="circle">1</div>
+        <div class="info">
+          <h3>Discovery</h3>
+          <p>Understanding client requirements, business goals, market research, competitor analysis, and defining project scope and deliverables.</p>
+        </div>
+      </div>
+  
+      <!-- Step 2: UI/UX Design -->
+      <div class="step">
+        <div class="circle">2</div>
+        <div class="info">
+          <h3>UI/UX Design</h3>
+          <p>Wireframing, prototype creation, UI design, UX design, visual design, and interaction design to ensure an intuitive user experience.</p>
+        </div>
+      </div>
+  
+      <!-- Step 3: Architecture -->
+      <div class="step">
+        <div class="circle">3</div>
+        <div class="info">
+          <h3>Architecture</h3>
+          <p>Defining the technical architecture, database structure, server configuration, selecting frameworks, and setting up the development environment.</p>
+        </div>
+      </div>
+  
+      <!-- Step 4: Development -->
+      <div class="step">
+        <div class="circle">4</div>
+        <div class="info">
+          <h3>Development</h3>
+          <p>Frontend development, backend development, database integration, API integration, content management systems, and ongoing code reviews and testing.</p>
+        </div>
+      </div>
+  
+      <!-- Step 5: Quality Assurance -->
+      <div class="step">
+        <div class="circle">5</div>
+        <div class="info">
+          <h3>Quality Assurance</h3>
+          <p>Functional testing, user acceptance testing (UAT), performance testing, cross-browser compatibility testing, security testing, and bug fixing.</p>
+        </div>
+      </div>
+  
+      <!-- Step 6: Deployment -->
+      <div class="step">
+        <div class="circle">6</div>
+        <div class="info">
+          <h3>Deployment</h3>
+          <p>Deploying the website to the production environment, setting up web hosting, ensuring domain configuration, and implementing SSL certificates for security.</p>
+        </div>
+      </div>
+  
+      <!-- Step 7: Post Launch -->
+      <div class="step">
+        <div class="circle">7</div>
+        <div class="info">
+          <h3>Post Launch</h3>
+          <p>Monitor site performance, address bugs or issues, optimize for search engines (SEO), and provide ongoing support and maintenance for future updates.</p>
+        </div>
+      </div>
+  
+    </div>
+  </section>
+  
+  <style>
+    /* Style for video background */
+    .video-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: -1;
+      opacity: 0.2; /* Adjust the opacity as needed */
+    }
+  
+    .video-background video {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  
+    .development-process {
+      position: relative;
+      z-index: 1;
+      padding: 50px 20px;
+      color: white;
+    }
+  
+    /* Ensure the text is white and bold */
+    .development-process h2,
+    .development-process h3,
+    .development-process p {
+      color: white;
+      font-weight: bold;
+    }
+  
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+  
+    .step {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+  
+    .circle {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.7); /* Transparent white background for circles */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #000;
+      font-weight: bold;
+    }
+  
+    .info {
+      max-width: 600px;
+    }
+  </style>
+  
+  
+  
+  
+
+  <!-- CTA Section -->
+  <section class="cta-section" id="get-started">
+    <h2>Ready to build your Web Application?</h2>
+    <form class="cta-form">
+      <input type="text" placeholder="Name" required />
+      <input type="email" placeholder="Email" required />
+      <textarea placeholder="Your idea or requirements"></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+
+  <footer>
+    <div class="footer-container">
+    
+      <div class="footer-box">
+        
+        <img src="logo.gif" alt="Kodeo Software Technology Logo" class="footer-logo">
+        <p>We are a skilled team delivering innovative websites, apps, and software with reliable IT solutions.</p>
+        <div class="footer-social">
+          <a href="https://fb.me/Kodeosoftwaretechnology" target="blank" class="facebook">
+              <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://www.instagram.com/kodeosoftwaretechnology/" target="blank" class="instagram">
+              <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://t.me/infokodeo" target="blank" class="telegram">
+              <i class="fab fa-telegram-plane"></i>
+          </a>
+          <a href="https://www.linkedin.com/company/kodeo-software-technology/?originalSubdomain=in" target="blank" class="linkedin">
+              <i class="fab fa-linkedin-in"></i>
+          </a>
+      </div>
+      
+      </div>
+  
+      <div class="footer-box">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><i class="bx bx-chevron-right"></i> <a href="./about_us.html">About US</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="./contact_us.html">Contact</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="./services.html">Services</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="./career.html">Career</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-box">
+        <h4>Our Services</h4>
+        <ul>
+          <li><i class="bx bx-chevron-right"></i> <a href="./cyber_service.html">Cyber Security</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="./aiml_service.html">Artifical Intelligence</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="./MachineLearning.html">Machine Learning</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="./web_service.html">Software Development</a></li>
+         
+        </ul>
+      </div>
+  
+      <div class="footer-box footer-contact">
+        <h4>Contact Us</h4>
+        <p><i class="fas fa-envelope"></i> info@kodeosoftwaretechnology.com</p>
+        <p><i class="fas fa-map-marker-alt"></i> Office no.733, Gera Imperium Rise,<br>Hinjewadi Phase 2, Pune, 411057</p>
+      </div>
+  
+    </div>
+  
+    <div class="footer-bottom">
+      <div class="copyright">
+          &copy; Copyright <strong><span>Kodeo Software technology</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+          Designed by Kodeo Software Technology
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+
+  <script>
+    AOS.init({ once: true });
+  </script>
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("mobileMenu");
+      menu.classList.toggle("show");
+    }
+  
+    // Hide navbar on scroll down
+    let lastScrollTop = 0;
+    const header = document.querySelector("header");
+  
+    window.addEventListener("scroll", function () {
+      let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      if (scrollTop > lastScrollTop) {
+        header.classList.add("hidden");
+      } else {
+        header.classList.remove("hidden");
+      }
+      lastScrollTop = scrollTop;
+    });
+  </script>
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target); // Animate only once
+        }
+      });
+    }, {
+      threshold: 0.15
+    });
+  
+    document.querySelectorAll('.animate').forEach(el => observer.observe(el));
+  </script>
+  
+</body>
+</html>

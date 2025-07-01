@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kodeo | Mobile App Development</title>
+  <link rel="icon" type="image/gif" href="logo.gif" />
+  <link rel="stylesheet" href="aiml.css" />
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="footer.css">
+  <script src="script.js" defer></script>
+</head>
+<!-- Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+<style>
+  .service-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 60px 20px;
+  }
+  
+  .card {
+    width: 300px;
+    height: 350px;
+    perspective: 1000px;
+  }
+  
+  .card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  .card:hover .card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #1a132f;
+    color: #fff;
+  }
+  
+  .card-front img {
+    width: 160px;
+    margin-bottom: 15px;
+  }
+  
+  .card-front h3 {
+    color: #a259ff;
+    font-size: 18px;
+    text-align: center;
+  }
+  
+  .card-back {
+    transform: rotateY(180deg);
+    padding: 20px;
+    text-align: center;
+    background: #221b3a;
+  }
+  
+  .card-back p {
+    color: #ccc;
+    font-size: 14px;
+    
+  }
+
+  .tech-stack {
+  padding: 60px 40px;
+  text-align: center;
+  background: rgba(162, 89, 255, 0.05); /* faint purple background */
+  border-radius: 10px;
+  margin: 40px 20px;
+}
+
+.cta-section {
+  padding: 80px 20px;
+  background: linear-gradient(to bottom, #1c1938, #0f0c1f);
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.cta-section h2 {
+  font-size: 28px;
+  color: #a259ff;
+  margin-bottom: 40px;
+  letter-spacing: 0.5px;
+  text-shadow: 0 0 8px rgba(162, 89, 255, 0.3);
+}
+
+.cta-form {
+  max-width: 500px;
+  margin: auto;
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cta-form input,
+.cta-form textarea {
+  padding: 14px 16px;
+  border: none;
+  border-radius: 10px;
+  background: #1a132f;
+  color: #fff;
+  font-size: 15px;
+  transition: background 0.3s ease;
+}
+
+.cta-form input:focus,
+.cta-form textarea:focus {
+  outline: none;
+  background: #221b3a;
+  box-shadow: 0 0 0 2px #a259ff66;
+}
+
+.cta-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.cta-form button {
+  background: #a259ff;
+  width: 130px;
+  align-items: center;
+  color: white;
+  padding: 14px;
+  border: none;
+  font-weight: bold;
+  font-size: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+.cta-form button:hover {
+  background: #7a3dd8;
+  transform: translateY(-2px);
+}
+
+
+  </style>
+
+  
+
+<body>
+    <header>
+        <nav class="navbar">
+          <ul class="nav-left">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./services.html">Services</a></li>
+            <li><a href="./career.html">Career</a></li>
+          </ul>
+      
+          <a href="index.html" class="logo">
+            <img src="logo.gif" alt="Kodeo Logo" class="logo-gif" />
+          </a>
+      
+          <ul class="nav-right">
+            <li><a href="./products.html">Product</a></li>
+            <li><a class="active" href="#hero">About-Us</a></li>
+            <li><a href="./contact_us.html">Contact</a></li>
+          </ul>
+      
+          <!-- Hamburger for Mobile -->
+          <div class="hamburger" onclick="toggleMenu()">
+            <span></span><span></span><span></span>
+          </div>
+        </nav>
+      
+        <!-- Mobile menu links -->
+        <div class="mobile-menu" id="mobileMenu">
+          <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="./services.html">Services</a></li>
+            <li><a href="./career.html">Career</a></li>
+            <li><a href="./products.html">Product</a></li>
+            <li><a href="./about_us.html">About Us</a></li>
+            <li><a href="./contact_us.html">Contact</a></li>
+          </ul>
+        </div>
+      </header>
+
+  <section class="hero animate fade-up">
+    <div class="hero-content">
+      <h1>Artificial Intelligence </h1>
+      <p>At Kodeo Software Technology, we specialize in Artificial Intelligence and Machine Learning (AIML) solutions to drive innovation and efficiency. We harness the power of AIML to automate processes, enhance decision-making, and unlock new possibilities. Our team is dedicated to delivering smart, data-driven solutions that help businesses stay ahead in the digital age.</p>
+      <a href="#get-started" class="cta-btn">Get Started</a>
+    </div>
+    <div class="hero-img">
+      <img src="assets/img/Images/SERVICES2.jpg" alt="Mobile Dev Illustration">
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="content-block">
+      <h2>Overview</h2>
+      <p>We develop next-gen AIML solutions tailored to your business needs. From intelligent automation to data-driven insights, our AI and ML technologies enhance efficiency, accuracy, and decision-making, empowering businesses to stay ahead in the digital era.</p>
+    </div>
+  </section>
+  <!-- Android App Development Section -->
+  <div class="service-cards">
+  <div class="card">
+    <div class="card-inner">
+      <div class="card-front">
+        <img src="assets/img/Images/AI1.jpg" alt="Android">
+        <h3>AI-Powered Automation</h3>
+      </div>
+      <div class="card-back">
+        <p>Streamline operations with intelligent automation, reducing manual effort and enhancing efficiency.</p>
+      </div>
+    </div>
+  </div>
+
+
+ 
+
+  <div class="card">
+    <div class="card-inner">
+      <div class="card-front">
+        <img src="assets/img/Images/AI4.jpg" alt="Cloud Backend">
+        <h3>Predictive Analytics</h3>
+      </div>
+      <div class="card-back">
+        <p>Harness the power of AI to analyze historical data, identify trends, and make accurate predictions for informed decision-making.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-inner">
+      <div class="card-front">
+        <img src="assets/img/Images/AI5.jpg" alt="Cloud Backend">
+        <h3>Custom Machine Learning <br>
+           Models</h3>
+      </div>
+      <div class="card-back">
+        <p>Develop tailored ML models for your business needs, ensuring optimal performance and precise outcomes.</p>
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+
+  <section class="tech-stack">
+    <h2>Tech Expertise</h2>
+    <ul>
+      <li>Deep Learning</li>
+      <li>Natural Language Processing (NLP)</li>
+      <li>Computer Vision</li>
+      <li>Predictive Analytics</li>
+      <li>TensorFlow / PyTorch / scikit-learn</li>
+      <li>AI-Powered Automation</li>
+    </ul>
+  </section>
+
+  <!-- AI/ML Development Process Section -->
+  <section class="development-process animate fade-up">
+    <h2>AI Development Process</h2>
+    <div class="timeline">
+      <div class="step">
+        <div class="circle">1</div>
+        <div class="info">
+          <h3>Problem Definition</h3>
+          <p>Understanding business challenges, defining AI/ML objectives, and identifying key success metrics.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="circle">2</div>
+        <div class="info">
+          <h3>Data Collection & Processing</h3>
+          <p>Gathering relevant data, cleaning, preprocessing, and structuring datasets for model training.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="circle">3</div>
+        <div class="info">
+          <h3>Model Selection & Training</h3>
+          <p>Choosing the right algorithms, training machine learning models, and fine-tuning parameters.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="circle">4</div>
+        <div class="info">
+          <h3>Model Evaluation & Optimization</h3>
+          <p>Validating model performance using metrics, optimizing accuracy, and reducing errors.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="circle">5</div>
+        <div class="info">
+          <h3>Deployment & Integration</h3>
+          <p>Deploying AI/ML models into production, integrating with existing systems, and ensuring scalability.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="circle">6</div>
+        <div class="info">
+          <h3>Monitoring & Maintenance</h3>
+          <p>Continuous model performance monitoring, retraining with new data, and improving efficiency.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="circle">7</div>
+        <div class="info">
+          <h3>Post-Deployment Support</h3>
+          <p>Ongoing enhancements, user feedback analysis, and adapting models to evolving business needs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- CTA Section -->
+  <section class="cta-section" id="get-started">
+    <h2>Ready to Learn?</h2>
+    <form class="cta-form">
+      <input type="text" placeholder="Name" required />
+      <input type="email" placeholder="Email" required />
+      <textarea placeholder="Your idea or requirements"></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+<!-- ======= Footer ======= -->
+ 
+
+<footer>
+  <div class="footer-container">
+  
+    <div class="footer-box">
+      
+      <img src="logo.gif" alt="Kodeo Software Technology Logo" class="footer-logo">
+      <p>We are a skilled team delivering innovative websites, apps, and software with reliable IT solutions.</p>
+      <div class="footer-social">
+        <a href="https://fb.me/Kodeosoftwaretechnology" target="blank" class="facebook">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.instagram.com/kodeosoftwaretechnology/" target="blank" class="instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://t.me/infokodeo" target="blank" class="telegram">
+            <i class="fab fa-telegram-plane"></i>
+        </a>
+        <a href="https://www.linkedin.com/company/kodeo-software-technology/?originalSubdomain=in" target="blank" class="linkedin">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+    </div>
+    
+    </div>
+
+    <div class="footer-box">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><i class="bx bx-chevron-right"></i> <a href="./about_us.html">About US</a></li>
+        <li><i class="bx bx-chevron-right"></i> <a href="./contact_us.html">Contact</a></li>
+        <li><i class="bx bx-chevron-right"></i> <a href="./services.html">Services</a></li>
+        <li><i class="bx bx-chevron-right"></i> <a href="./career.html">Career</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-box">
+      <h4>Our Services</h4>
+      <ul>
+        <li><i class="bx bx-chevron-right"></i> <a href="./cyber_service.html">Cyber Security</a></li>
+        <li><i class="bx bx-chevron-right"></i> <a href="./aiml_service.html">Artifical Intelligence</a></li>
+        <li><i class="bx bx-chevron-right"></i> <a href="./MachineLearning.html">Machine Learning</a></li>
+        <li><i class="bx bx-chevron-right"></i> <a href="./web_service.html">Software Development</a></li>
+       
+      </ul>
+    </div>
+
+    <div class="footer-box footer-contact">
+      <h4>Contact Us</h4>
+      <p><i class="fas fa-envelope"></i> info@kodeosoftwaretechnology.com</p>
+      <p><i class="fas fa-map-marker-alt"></i> Office no.733, Gera Imperium Rise,<br>Hinjewadi Phase 2, Pune, 411057</p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <div class="copyright">
+        &copy; Copyright <strong><span>Kodeo Software technology</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        Designed by Kodeo Software Technology
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+
+  <script>
+    AOS.init({ once: true });
+  </script>
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("mobileMenu");
+      menu.classList.toggle("show");
+    }
+  
+    // Hide navbar on scroll down
+    let lastScrollTop = 0;
+    const header = document.querySelector("header");
+  
+    window.addEventListener("scroll", function () {
+      let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      if (scrollTop > lastScrollTop) {
+        header.classList.add("hidden");
+      } else {
+        header.classList.remove("hidden");
+      }
+      lastScrollTop = scrollTop;
+    });
+  </script>
+
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target); // Animate only once
+        }
+      });
+    }, {
+      threshold: 0.15
+    });
+  
+    document.querySelectorAll('.animate').forEach(el => observer.observe(el));
+  </script>
+  
+</body>
+</html>

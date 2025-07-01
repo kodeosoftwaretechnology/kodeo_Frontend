@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Kodeo Software Technology</title>
+  <link rel="icon" type="image/gif" href="logo.gif" />
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Roboto:300,400,500,700|Poppins:300,400,500,600,700"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+
+  <link href="products.css" rel="stylesheet">
+  <link rel="stylesheet" href="footer.css" />
+  <link rel="stylesheet" href="navbar.css" />
+  <script src="script.js" defer></script>
+  <!-- ✅ Font Awesome for Social Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- ================================
+       OPTIONAL CUSTOM INLINE CSS
+       ================================ -->
+  <style>
+    /* Extra Mobile Responsiveness for Products Page */
+    @media (max-width: 480px) {
+      #hero5 {
+        height: 100vh !important;
+      }
+
+      .hero-content h1 {
+        font-size: 1.3rem !important;
+        padding: 0 5px !important;
+      }
+
+      .container,
+      .projects-section .container {
+        padding: 0 5px !important;
+      }
+
+      .row,
+      .projects-section .row {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        gap: 10px !important;
+      }
+
+      .card {
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: 100% !important;
+        margin-bottom: 12px !important;
+      }
+
+      .card-img-top {
+        max-width: 100% !important;
+        height: auto !important;
+      }
+
+      .card-title {
+        font-size: 1rem !important;
+      }
+
+      .card-text {
+        font-size: 0.9rem !important;
+      }
+
+      .footer-container {
+        flex-direction: column !important;
+        gap: 20px !important;
+        padding: 10px 5px !important;
+      }
+
+      .footer-box {
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: 100% !important;
+        margin-bottom: 10px !important;
+      }
+
+      .footer-logo {
+        width: 60px !important;
+        height: auto !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header>
+    <nav class="navbar">
+      <ul class="nav-left">
+
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./services.html">Services</a></li>
+        <li><a href="./career.html">Career</a></li>
+      </ul>
+
+      <a href="index.html" class="logo">
+        <img src="logo.gif" alt="Kodeo Logo" class="logo-gif" />
+      </a>
+
+      <ul class="nav-right">
+        <li><a class="active" href="#hero">Products</a></li>
+        <li><a href="./about_us.html">About Us</a></li>
+        <li><a href="./contact_us.html">Contact</a></li>
+      </ul>
+
+      <!-- Hamburger for Mobile -->
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </div>
+    </nav>
+
+    <!-- Mobile menu links -->
+    <div class="mobile-menu" id="mobileMenu">
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./services.html">Services</a></li>
+        <li><a href="./career.html">Career</a></li>
+        <li><a href="./products.html">Product</a></li>
+        <li><a href="./about_us.html">About Us</a></li>
+        <li><a href="./contact_us.html">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+  <!-- End Header -->
+
+  <!-- ======= Hero/Top Banner (if any) ======= -->
+  <section id="hero5">
+    <video autoplay muted loop id="hero-video">
+      <source src="hero1.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="hero-content">
+      <!-- Your content here -->
+      <h1 style="color:white; font-size: 39px; text-align: center; margin: 0;">YOUR BUSINESS IS OUR CONCERN</h1>
+      <p>We provide innovative solutions to help your business grow and succeed in the digital age. Our products are
+        designed to solve your challenges and drive results.</p>
+      <a href="#products" class="btn">Explore Our Products</a>
+      <!-- End Hero -->
+    </div>
+  </section>
+
+
+
+  <!-- ================================
+       NEW PRODUCTS SECTION
+       ================================ -->
+  <section class="container py-5" id="products" style="background-color:rgb(9, 9, 9);">
+    <div class="row row-cols-1 row-cols-lg-2 g-4">
+      <div class="col d-flex align-items-stretch">
+        <div class="card border-0 shadow-sm w-100 text-center" style="background-color:rgb(9, 9, 9);">
+          <img src="assets/img/Images/Gather Feedback.png" class="card-img-top img-fluid" alt="Gather Feedback"
+            style="max-width: 500px; margin: 0 auto;">
+          <div class="card-body" style="background-color:rgb(9, 9, 9);">
+            <h2 class="card-title">Gather Feedback</h2>
+            <p class="card-text">Long form-based surveys. The most common way of collecting customer feedback is survey
+              forms with a set of questions that are usually sent in an email.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col d-flex align-items-stretch">
+        <div class="card border-0 shadow-sm w-100 text-center" style="background-color:rgb(9, 9, 9);">
+          <img src="assets/img/Images/Freely Communicate.png" class="card-img-top img-fluid" alt="Freely Communicate"
+            style="max-width: 500px; margin: 0 auto;">
+          <div class="card-body" style="background-color:rgb(9, 9, 9);">
+            <h2 class="card-title">Freely Communicate</h2>
+            <p class="card-text">Customer Support – improve customer satisfaction through better service.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Products Section -->
+
+  <!-- ================================
+     OUR RECENT PROJECTS SECTION
+     ================================ -->
+  <section class="projects-section" id="projects">
+    <div class="container" data-aos="fade-up">
+      <div class="row">
+        <div class="col-12">
+          <h1 class="text-center mb-5" data-aos="fade-up" data-aos-delay="50" style="color: #ffffff;"><b>OUR RECENT
+              PROJECTS</b></h1>
+        </div>
+      </div>
+
+
+      <!-- Projects Row -->
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+          <div class="card project-card">
+            <img src="./assets/img/Images/Project-1.png" class="card-img-top" alt="Project 1">
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+          <div class="card project-card">
+            <img src="./assets/img/Images/Project-2.png" class="card-img-top" alt="Project 2">
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+          <div class="card project-card">
+            <img src="./assets/img/Images/project-3.png" class="card-img-top" alt="Project 3">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Projects Section -->
+
+  <!-- ======= Footer ======= -->
+
+
+  <footer>
+    <div class="footer-container">
+
+      <div class="footer-box">
+
+        <img src="logo.gif" alt="Kodeo Software Technology Logo" class="footer-logo">
+        <p>We are a skilled team delivering innovative websites, apps, and software with reliable IT solutions.</p>
+        <div class="footer-social">
+          <a href="https://fb.me/Kodeosoftwaretechnology" target="blank" class="facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://www.instagram.com/kodeosoftwaretechnology/" target="blank" class="instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://t.me/infokodeo" target="blank" class="telegram">
+            <i class="fab fa-telegram-plane"></i>
+          </a>
+          <a href="https://www.linkedin.com/company/kodeo-software-technology/?originalSubdomain=in" target="blank"
+            class="linkedin">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
+
+      </div>
+
+      <div class="footer-box">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><i class="bx bx-chevron-right"></i> <a href="./about_us.html">About US</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="./contact_us.html">Contact</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="./services.html">Services</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="./career.html">Career</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-box">
+        <h4>Our Services</h4>
+        <ul>
+          <li><i class="bx bx-chevron-right"></i> <a href="./cyber_service.html">Cyber Security</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="./aiml_service.html">Artifical Intelligence</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="./MachineLearning.html">Machine Learning</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="./web_service.html">Software Development</a></li>
+
+        </ul>
+      </div>
+
+      <div class="footer-box footer-contact">
+        <h4>Contact Us</h4>
+        <p><i class="fas fa-envelope"></i> info@kodeosoftwaretechnology.com</p>
+        <p id="location"><i class="fas fa-map-marker-alt"></i> Office no.733, Gera Imperium Rise,<br>Hinjewadi Phase 2,
+          Pune, 411057</p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Kodeo Software technology</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        Designed by Kodeo Software Technology
+      </div>
+    </div>
+    </div>
+  </footer>
+
+
+
+  <!-- End Footer -->
+
+  <!-- Back to Top -->
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+  <div id="preloader"></div>
+  <script>
+    AOS.init({ once: true });
+  </script>
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("mobileMenu");
+      menu.classList.toggle("show");
+    }
+
+    // Hide navbar on scroll down
+    let lastScrollTop = 0;
+    const header = document.querySelector("header");
+
+    window.addEventListener("scroll", function () {
+      let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      if (scrollTop > lastScrollTop) {
+        header.classList.add("hidden");
+      } else {
+        header.classList.remove("hidden");
+      }
+      lastScrollTop = scrollTop;
+    });
+
+  </script>
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

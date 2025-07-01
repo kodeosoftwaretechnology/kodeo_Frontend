@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kodeo Software Technology</title>
+  <link rel="icon" type="image/gif" href="logo.gif" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Vendor CSS (Swiper) -->
+  <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css">
+
+  <!-- Your Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="about_us.css" />
+  <link rel="stylesheet" href="service.css" />
+  <link rel="stylesheet" href="footer.css" />
+
+  <script src="script.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+  <script>AOS.init({ once: true });</script>
+</head>
+
+<body>
+
+  <!-- Loader Section with Fullscreen Video -->
+  <!-- <div id="loader">
+      <video id="preloader-video" autoplay muted playsinline>
+          <source src="intro.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+      </video>
+  </div> -->
+
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <nav class="navbar">
+      <ul class="nav-left">
+        <li><a class="active" href="#hero">Home</a></li>
+        <li><a href="./services.html">Services</a></li>
+        <li><a href="./career.html">Career</a></li>
+      </ul>
+
+      <a href="index.html" class="logo">
+        <img src="logo.gif" alt="Kodeo Logo" class="logo-gif" />
+      </a>
+
+      <ul class="nav-right">
+        <li><a href="./products.html">Product</a></li>
+        <li><a href="./about_us.html">About Us</a></li>
+        <li><a href="./contact_us.html">Contact</a></li>
+      </ul>
+
+      <!-- Hamburger for Mobile -->
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </div>
+    </nav>
+
+    <!-- Mobile menu links -->
+    <div class="mobile-menu" id="mobileMenu">
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./services.html">Services</a></li>
+        <li><a href="./career.html">Career</a></li>
+        <li><a href="./products.html">Product</a></li>
+        <li><a href="./about_us.html">About Us</a></li>
+        <li><a href="./contact_us.html">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero">
+    <video autoplay muted loop playsinline>
+      <source src="hero.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
+    <div class="content" data-aos="fade-up">
+      <p class="para1">MODERN. PROFESSIONAL. RELIABLE</p>
+      <h1 id="typing-text"> </h1>
+
+      <div class="features">
+        <div class="feature" data-aos="flip-left" data-aos-delay="100">
+          <img src="./assets/img/Index/headr-1 icon.png" alt="Expert Marketing" />
+          <p>EXPERT MARKETING</p>
+        </div>
+        <div class="feature" data-aos="flip-left" data-aos-delay="200">
+          <img src="./assets/img/Index/headr-2 icon.png" alt="Lifetime Update" />
+          <p>LIFETIME UPDATE</p>
+        </div>
+        <div class="feature" data-aos="flip-left" data-aos-delay="300">
+          <img src="./assets/img/Index/headr-3 icon.png" alt="Professional Team" />
+          <p>PROFESSIONAL TEAM</p>
+        </div>
+        <div class="feature" data-aos="flip-left" data-aos-delay="400">
+          <img src="./assets/img/Index/headr-4 icon.png" alt="Cloud Technology" />
+          <p>CLOUD TECHNOLOGY</p>
+        </div>
+      </div>
+
+
+    </div>
+    <!-- <div class="fade-divider"></div> -->
+
+  </section>
+  <!-- End Hero -->
+
+  <main id="main">
+
+    <section id="expert-solutions">
+      <div class="container" data-aos="fade-up">
+        <div class="row">
+
+          <!-- Image -->
+          <div class="col image-col">
+            <div class="image-card">
+              <video autoplay muted loop playsinline>
+                <source src="./assets/img/Index/video123.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </div>
+
+
+          <!-- Text -->
+          <div class="col text-col" data-aos="fade-left">
+            <h1>Expert IT Solutions in AI, ML, Software Development & Cybersecurity</h1>
+            <hr />
+            <p>Artificial Intelligence & Machine Learning – Drive innovation and automation.</p>
+            <p>Enhance your business with intelligent solutions and predictive models.</p>
+            <ul>
+              <li>AI-based solutions for automation & decision making</li>
+              <li>Machine Learning algorithms for data analysis & predictions</li>
+              <li>Custom Software Development for scalable solutions</li>
+              <li>Robust Cybersecurity measures for web & mobile applications</li>
+            </ul>
+
+          </div>
+
+
+        </div>
+      </div>
+      <div class="fade-divider"></div>
+    </section>
+
+
+
+
+    <main role="main" id="experience-section">
+      <section class="experience-hero">
+        <div class="experience-content">
+          <h1>WE ARE THE BEST COMPANY WITH</h1>
+          <h1 class="highlight">5 Years Experience</h1>
+          <p>
+            Long form-based surveys. The most common way of collecting customer
+            feedback is survey forms with a set of questions that are usually sent
+            in an email.
+          </p>
+        </div>
+
+        <div class="experience-features">
+          <div class="feature-box" data-aos="fade-up">
+            <img src="./assets/img/Index/1.png" alt="Customer Support" />
+            <h2>24/7 Customer Support</h2>
+            <p>
+              Resolved thousands of customers' Computer/Network problems with high success rate and satisfaction.
+            </p>
+          </div>
+          <div class="feature-box" data-aos="fade-up" data-aos-delay="100">
+            <img src="./assets/img/Index/2.png" alt="Smart Solutions" />
+            <h2>Smart Solutions</h2>
+            <p>
+              Reliable IT Infrastructure services that offer practical, cost-effective solutions for various industries.
+            </p>
+          </div>
+          <div class="feature-box" data-aos="fade-up" data-aos-delay="200">
+            <img src="./assets/img/Index/3.png" alt="Custom UI" />
+            <h2>Customizable User Interface</h2>
+            <p>
+              Building flexible and dynamic interfaces tailored to client needs for maximum usability.
+            </p>
+          </div>
+          <div class="feature-box" data-aos="fade-up" data-aos-delay="300">
+            <img src="./assets/img/Index/4.png" alt="Core Values" />
+            <h2>Our Core Focus & Values</h2>
+            <ul>
+              <li>Accessibility</li>
+              <li>Prompt Service</li>
+              <li>Clear Accountability</li>
+              <li>Reliability</li>
+              <li>Cost-effective Solutions</li>
+            </ul>
+          </div>
+        </div>
+        <div class="fade-divider"></div>
+      </section>
+    </main>
+
+    <section id="kodeo-services-unique">
+      <video autoplay muted loop playsinline class="bg-video">
+        <source src="hero1.mp4" type="video/mp4" />
+        Your browser does not support HTML5 video.
+      </video>
+      <div class="video-overlay"></div>
+
+      <div class="kodeo-section-header">
+        <h3>WHAT WE DO</h3>
+        <h2>Kodeo offers all kinds of IT Solutions</h2>
+      </div>
+
+      <!-- Swiper Container -->
+      <div class="swiper kodeo-slider">
+        <div class="swiper-wrapper">
+          <!-- Slide 1: Web Development -->
+          <div class="swiper-slide">
+            <div class="kodeo-card" data-tilt>
+              <div class="card-glass">
+                <img src="./assets/img/Index/Web Development.png" alt="Web Dev" />
+                <h4>Web Development</h4>
+                <p>Building robust web applications with cutting-edge technologies.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2: Artificial Intelligence -->
+          <div class="swiper-slide">
+            <div class="kodeo-card" data-tilt>
+              <div class="card-glass">
+                <img src="./assets/img/Index/Data Management.png" alt="Data" />
+                <h4>Artificial Intelligence</h4>
+                <p>Innovative AI solutions for business Intelligence.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3: Cybersecurity -->
+          <div class="swiper-slide">
+            <div class="kodeo-card" data-tilt>
+              <div class="card-glass">
+                <img src="./assets/img/Index/Security systems.png" alt="Security" />
+                <h4>Cybersecurity</h4>
+                <p>End-to-end protection for networks, devices & data.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 4: Machine Learning -->
+          <div class="swiper-slide">
+            <div class="kodeo-card" data-tilt>
+              <div class="card-glass">
+                <img src="./assets/img/Index/Graphic design.png" alt="Design" />
+                <h4>Machine Learning</h4>
+                <p>Leverage advanced algorithms to drive smarter business decisions.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 5: Software Development -->
+          <div class="swiper-slide">
+            <div class="kodeo-card" data-tilt>
+              <div class="card-glass">
+                <img src="./assets/img/Index/Digital marketing.png" alt="Marketing" />
+                <h4>Software Development</h4>
+                <p>Custom software solutions designed to meet your business requirements.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 6: Deployment (New) -->
+          <div class="swiper-slide">
+            <div class="kodeo-card" data-tilt>
+              <div class="card-glass">
+                <img src="./assets/img/Index/Internet services.png" alt="Deployment" />
+                <h4>Deployment</h4>
+                <p>Seamless deployment and maintenance for scalable applications.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+      </div>
+      <div class="fade-divider"></div>
+    </section>
+
+
+    <section class="clients-section" data-aos="fade-up">
+      <div class="container">
+        <h2 class="section-title">Our Clients</h2>
+        <p>Serving a diverse range of industries around the globe</p>
+
+        <!-- Scrollable Logo Container -->
+        <div class="clients-wrapper">
+          <!-- Scrolling track with logos -->
+          <div class="clients-track">
+            <!-- First Set -->
+            <div class="client-logo-block">
+              <img src="./logo/sula.png" alt="Client 1" class="client-logo enhanced-logo">
+              <img src="./logo/accs.jpeg" alt="Client 2" class="client-logo enhanced-logo">
+              <img src="./logo/beer_house.webp" alt="Client 3" class="client-logo enhanced-logo">
+              <img src="./logo/foton.png" alt="Client 4" class="client-logo enhanced-logo">
+              <img src="./logo/hyatt.jpeg" alt="Client 5" class="client-logo enhanced-logo">
+              <img src="./logo/mehta.png" alt="Client 6" class="client-logo enhanced-logo">
+              <img src="./logo/nagebaba.jpeg" alt="Client 7" class="client-logo enhanced-logo">
+              <img src="./logo/nmp.jpeg" alt="Client 8" class="client-logo enhanced-logo">
+              <img src="./logo/ruby.jpg" alt="Client 10" class="client-logo enhanced-logo">
+              <img src="./logo/shar.jpeg" alt="Client 11" class="client-logo enhanced-logo">
+            </div>
+            <!-- Second Set -->
+            <div class="client-logo-block">
+              <img src="./logo/sula.png" alt="Client 1b" class="client-logo enhanced-logo">
+              <img src="./logo/accs.jpeg" alt="Client 2b" class="client-logo enhanced-logo">
+              <img src="./logo/beer_house.webp" alt="Client 3b" class="client-logo enhanced-logo">
+              <img src="./logo/foton.png" alt="Client 4b" class="client-logo enhanced-logo">
+              <img src="./logo/hyatt.jpeg" alt="Client 5b" class="client-logo enhanced-logo">
+              <img src="./logo/mehta.png" alt="Client 6b" class="client-logo enhanced-logo">
+              <img src="./logo/nagebaba.jpeg" alt="Client 7b" class="client-logo enhanced-logo">
+              <img src="./logo/nmp.jpeg" alt="Client 8b" class="client-logo enhanced-logo">
+              <img src="./logo/ruby.jpg" alt="Client 10b" class="client-logo enhanced-logo">
+              <img src="./logo/shar.jpeg" alt="Client 11b" class="client-logo enhanced-logo">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+
+
+  <footer>
+    <div class="footer-container">
+
+      <div class="footer-box">
+
+        <img src="logo.gif" alt="Kodeo Software Technology Logo" class="footer-logo">
+        <p>We are a skilled team delivering innovative websites, apps, and software with reliable IT solutions.</p>
+        <div class="footer-social">
+          <a href="https://fb.me/Kodeosoftwaretechnology" target="blank" class="facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://www.instagram.com/kodeosoftwaretechnology/" target="blank" class="instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://t.me/infokodeo" target="blank" class="telegram">
+            <i class="fab fa-telegram-plane"></i>
+          </a>
+          <a href="https://www.linkedin.com/company/kodeo-software-technology/?originalSubdomain=in" target="blank"
+            class="linkedin">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
+
+      </div>
+
+      <div class="footer-box">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><i class="bx bx-chevron-right"></i> <a href="./about_us.html">About US</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="./contact_us.html">Contact</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="./services.html">Services</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="./career.html">Career</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-box">
+        <h4>Our Services</h4>
+        <ul>
+          <li><i class="bx bx-chevron-right"></i> <a href="./cyber_service.html">Cyber Security</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="./aiml_service.html">Artifical Intelligence</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="./MachineLearning.html">Machine Learning</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="./web_service.html">Software Development</a></li>
+
+        </ul>
+      </div>
+
+      <div class="footer-box footer-contact">
+        <h4>Contact Us</h4>
+        <p><i class="fas fa-envelope"></i> info@kodeosoftwaretechnology.com</p>
+        <p><i class="fas fa-map-marker-alt"></i> Office no.733, Gera Imperium Rise,<br>Hinjewadi Phase 2, Pune, 411057
+        </p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Kodeo Software technology</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        Designed by Kodeo Software Technology
+      </div>
+    </div>
+    </div>
+  </footer>
+
+  <!-- Add Swiper.js -->
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <script>
+    AOS.init({ once: true });
+  </script>
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("mobileMenu");
+      menu.classList.toggle("show");
+    }
+
+    // Hide navbar on scroll down
+    let lastScrollTop = 0;
+    const header = document.querySelector("header");
+
+    window.addEventListener("scroll", function () {
+      const menu = document.getElementById("mobileMenu");
+      let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      if (menu.classList.contains("show")) {
+        // Don't hide header if mobile menu is open
+        header.classList.remove("hidden");
+        return;
+      }
+      if (scrollTop > lastScrollTop) {
+        header.classList.add("hidden");
+      } else {
+        header.classList.remove("hidden");
+      }
+      lastScrollTop = scrollTop;
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const text = "We Are At The\nForefront of Technology";
+      const typingElement = document.getElementById("typing-text");
+      let index = 0;
+
+      function typeEffect() {
+        if (index < text.length) {
+          typingElement.innerHTML += text.charAt(index) === "\n" ? "<br>" : text.charAt(index);
+          index++;
+          setTimeout(typeEffect, 50); // Reduce delay for smoother effect
+        }
+      }
+
+      typeEffect();
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+      let video = document.getElementById("preloader-video");
+
+      // When video ends, hide loader and show content
+      video.onended = function () {
+        document.getElementById("loader").style.display = 'none';
+        document.getElementById("content").style.display = 'block';
+      };
+    });
+
+    // Initialize Swiper
+    document.addEventListener("DOMContentLoaded", function () {
+      new Swiper(".kodeo-slider", {
+        speed: 600,
+        loop: true,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        slidesPerView: "auto",
+        centeredSlides: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+          },
+          1200: {
+            slidesPerView: 3,
+            spaceBetween: 40,
+          },
+        },
+      });
+    });
+  </script>
+
+
+
+
+</body>
+
+</html>

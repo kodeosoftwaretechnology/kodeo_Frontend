@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kodeo | Machine Learning</title>
+  <link rel="icon" type="image/gif" href="logo.gif" />
+  <link rel="stylesheet" href="MachineLearning.css" />
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="footer.css">
+  <script src="script.js" defer></script>
+</head>
+
+<!-- Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<body>
+    <header>
+        <nav class="navbar">
+          <ul class="nav-left">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./services.html">Services</a></li>
+            <li><a href="./career.html">Career</a></li>
+          </ul>
+      
+          <a href="index.html" class="logo">
+            <img src="logo.gif" alt="Kodeo Logo" class="logo-gif" />
+          </a>
+      
+          <ul class="nav-right">
+            <li><a href="./products.html">Product</a></li>
+            <li><a class="active" href="#hero">About-Us</a></li>
+            <li><a href="./contact_us.html">Contact</a></li>
+          </ul>
+      
+          <!-- Hamburger for Mobile -->
+          <div class="hamburger" onclick="toggleMenu()">
+            <span></span><span></span><span></span>
+          </div>
+        </nav>
+      
+        <!-- Mobile menu links -->
+        <div class="mobile-menu" id="mobileMenu">
+          <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="./services.html">Services</a></li>
+            <li><a href="./career.html">Career</a></li>
+            <li><a href="./products.html">Product</a></li>
+            <li><a href="./about_us.html">About Us</a></li>
+            <li><a href="./contact_us.html">Contact</a></li>
+          </ul>
+        </div>
+      </header>
+
+  <section class="hero animate fade-up">
+    <div class="hero-content">
+      <h1>Machine Learning</h1>
+      <p>We use machine learning to deliver intelligent, data-driven solutions that help businesses make smarter decisions and automate processes.</p>
+      <a href="#get-started" class="cta-btn">Get Started</a>
+    </div>
+    <div class="hero-img">
+      <img src="assets/img/Images/ML.jpg" alt="Mobile Dev Illustration">
+    </div>
+  </section>
+  
+  <section class="app-development-section">
+    <div class="app-content">
+      <h2>Deep Learning</h2>
+      <p>A subfield of machine learning focused on artificial neural networks with multiple layers that can model complex patterns in large datasets, used for tasks like image recognition and natural language processing.</p>
+      <a href="#">View Details →</a>
+    </div>
+    <div class="app-image">
+      <img src="assets/img/Images/deeplearning.svg" alt="Deep Learning">
+    </div>
+  </section>
+  
+  <section class="app-development-section">
+    <div class="app-content">
+      <h2>Natural Language Processing (NLP)</h2>
+      <p>NLP techniques enable machines to understand, interpret, and generate human language. It is used in chatbots, speech recognition, sentiment analysis, and machine translation.</p>
+      <a href="#">View Details →</a>
+    </div>
+    <div class="app-image">
+      <img src="assets/img/Images/nlp.svg" alt="Natural Language Processing">
+    </div>
+  </section>
+  
+  <section class="app-development-section">
+    <div class="app-content">
+      <h2>Computer Vision</h2>
+      <p>Computer vision models are designed to interpret and make decisions based on visual input, enabling applications like facial recognition, object detection, and autonomous vehicles.</p>
+      <a href="#">View Details →</a>
+    </div>
+    <div class="app-image">
+      <img src="assets/img/Images/computer.svg" alt="Computer Vision">
+    </div>
+  </section>
+  
+  <section class="app-development-section">
+    <div class="app-content">
+      <h2>Generative Adversarial Networks (GANs)</h2>
+      <p>GANs are a class of machine learning frameworks where two neural networks contest with each other to generate data that mimics real-world examples. Used in image generation and creative applications.</p>
+      <a href="#">View Details →</a>
+    </div>
+    <div class="app-image">
+      <img src="assets/img/Images/gen.svg" alt="Generative Adversarial Networks">
+    </div>
+  </section>
+  
+
+  <section class="tech-stack">
+    <h2>Tech Expertise</h2>
+    <ul>
+      <li>Python</li>
+      <li>TensorFlow</li>
+      <li>Keras</li>
+      <li>PyTorch</li>
+      <li>Scikit-learn</li>
+      <li>NumPy / Pandas</li>
+      <li>Matplotlib / Seaborn</li>
+      <li>Jupyter Notebooks</li>
+      <li>Google Cloud AI / AWS SageMaker</li>
+      <li>SQL / NoSQL (MongoDB)</li>
+    </ul>
+  </section>
+  
+  <section class="development-process animate fade-up">
+    <h2>Machine Learning Development Process</h2>
+    <div class="timeline">
+      <div class="step">
+        <div class="circle">1</div>
+        <div class="info">
+          <h3>Data Collection</h3>
+          <p>Gather relevant data from multiple sources like sensors, APIs, or databases.</p>
+        </div>
+      </div>
+  
+      <div class="step">
+        <div class="circle">2</div>
+        <div class="info">
+          <h3>Data Preprocessing</h3>
+          <p>Clean and format the data, handle missing values, and normalize the data for consistency.</p>
+        </div>
+      </div>
+  
+      <div class="step">
+        <div class="circle">3</div>
+        <div class="info">
+          <h3>Model Selection</h3>
+          <p>Select the right machine learning algorithm based on the data and problem type (e.g., classification, regression).</p>
+        </div>
+      </div>
+  
+      <div class="step">
+        <div class="circle">4</div>
+        <div class="info">
+          <h3>Model Training</h3>
+          <p>Train the selected model on the preprocessed data and fine-tune using training sets.</p>
+        </div>
+      </div>
+  
+      <div class="step">
+        <div class="circle">5</div>
+        <div class="info">
+          <h3>Model Evaluation</h3>
+          <p>Evaluate model accuracy using validation and testing sets, applying metrics like accuracy or mean squared error (MSE).</p>
+        </div>
+      </div>
+  
+      <div class="step">
+        <div class="circle">6</div>
+        <div class="info">
+          <h3>Model Optimization</h3>
+          <p>Use techniques like hyperparameter tuning to optimize the model for better performance.</p>
+        </div>
+      </div>
+  
+      <div class="step">
+        <div class="circle">7</div>
+        <div class="info">
+          <h3>Deployment</h3>
+          <p>Deploy the trained model to production environments for real-time predictions or insights.</p>
+        </div>
+      </div>
+  
+      <div class="step">
+        <div class="circle">8</div>
+        <div class="info">
+          <h3>Post Launch</h3>
+          <p>Monitor model performance, retrain if needed, and update for new data to keep the model accurate.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+
+  <!-- CTA Section -->
+  <section class="cta-section" id="get-started">
+    <h2>Ready to build your app?</h2>
+    <form class="cta-form">
+      <input type="text" placeholder="Name" required />
+      <input type="email" placeholder="Email" required />
+      <textarea placeholder="Your idea or requirements"></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+  <footer>
+    <div class="footer-container">
+    
+      <div class="footer-box">
+        
+        <img src="logo.gif" alt="Kodeo Software Technology Logo" class="footer-logo">
+        <p>We are a skilled team delivering innovative websites, apps, and software with reliable IT solutions.</p>
+        <div class="footer-social">
+          <a href="https://fb.me/Kodeosoftwaretechnology" target="blank" class="facebook">
+              <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://www.instagram.com/kodeosoftwaretechnology/" target="blank" class="instagram">
+              <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://t.me/infokodeo" target="blank" class="telegram">
+              <i class="fab fa-telegram-plane"></i>
+          </a>
+          <a href="https://www.linkedin.com/company/kodeo-software-technology/?originalSubdomain=in" target="blank" class="linkedin">
+              <i class="fab fa-linkedin-in"></i>
+          </a>
+      </div>
+      
+      </div>
+  
+      <div class="footer-box">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><i class="bx bx-chevron-right"></i> <a href="./about_us.html">About US</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="./contact_us.html">Contact</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="./services.html">Services</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="./career.html">Career</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-box">
+        <h4>Our Services</h4>
+        <ul>
+          <li><i class="bx bx-chevron-right"></i> <a href="./cyber_service.html">Cyber Security</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="./aiml_service.html">Artifical Intelligence</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="./MachineLearning.html">Machine Learning</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="./web_service.html">Software Development</a></li>
+         
+        </ul>
+      </div>
+  
+      <div class="footer-box footer-contact">
+        <h4>Contact Us</h4>
+        <p><i class="fas fa-envelope"></i> info@kodeosoftwaretechnology.com</p>
+        <p><i class="fas fa-map-marker-alt"></i> Office no.733, Gera Imperium Rise,<br>Hinjewadi Phase 2, Pune, 411057</p>
+      </div>
+  
+    </div>
+  
+    <div class="footer-bottom">
+      <div class="copyright">
+          &copy; Copyright <strong><span>Kodeo Software technology</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+          Designed by Kodeo Software Technology
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <script>
+    AOS.init({ once: true });
+  </script>
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("mobileMenu");
+      menu.classList.toggle("show");
+    }
+  
+    // Hide navbar on scroll down
+    let lastScrollTop = 0;
+    const header = document.querySelector("header");
+  
+    window.addEventListener("scroll", function () {
+      let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      if (scrollTop > lastScrollTop) {
+        header.classList.add("hidden");
+      } else {
+        header.classList.remove("hidden");
+      }
+      lastScrollTop = scrollTop;
+    });
+  </script>
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target); // Animate only once
+        }
+      });
+    }, {
+      threshold: 0.15
+    });
+  
+    document.querySelectorAll('.animate').forEach(el => observer.observe(el));
+  </script>
+  
+</body>
+</html>

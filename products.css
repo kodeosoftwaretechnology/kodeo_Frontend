@@ -1,0 +1,212 @@
+ /* Global Styles */
+ body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #121212;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  h1, h2, h3 {
+    font-weight: 700;
+    color: #fff;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  /* Header Styling */
+  header {
+      background: transparent !important;
+      backdrop-filter: blur(10px) !important;
+      position: fixed !important;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+    
+    .navbar {
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+      flex-wrap: wrap;
+      padding: 10px 30px !important;
+      background: transparent !important;
+      box-shadow: none !important;
+    }
+    
+    /* Reset Bootstrap styles affecting links */
+    .navbar a {
+      color: #a5a4a4 !important;
+      text-decoration: none !important;
+      font-weight: bold !important;
+    }
+    
+    .navbar a:hover {
+      color: #e1bdfb !important;
+    }
+  /* Products Section Styling */
+  .products-section {
+    padding: 60px 0;
+    background: #f9f9f9;
+  }
+
+  .products-section h2 {
+    font-weight: 700;
+    font-size: 32px;
+    color: #333;
+  }
+
+  .products-section p {
+    font-size: 16px;
+    color: #555;
+    margin-top: 15px;
+    line-height: 1.7;
+  }
+
+
+
+  /* Projects Section Styling */
+.projects-section {
+background: linear-gradient(45deg, #2d296a, #19173d); /* Blue to Purple gradient */
+padding: 60px 0;
+}
+
+
+  .projects-section h1 {
+    font-weight: 700;
+    font-size: 32px;
+  }
+
+  .project-card {
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .project-card:hover {
+    transform: scale(1.05); /* Slight zoom-in effect */
+     }
+
+  .project-card img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+
+  .project-card:hover img {
+    transform: scale(1.05); /* Zoom effect on image */
+  }
+
+  .project-card .card-body {
+    padding: 20px;
+    background-color: #121212;
+  }
+
+  .project-card .card-title {
+    color: #7A4FD2; /* Blue color for titles */
+  }
+
+  .project-card .card-text {
+    color: #fff; /* White text */
+  }
+
+  /* Custom Product Section Styling */
+  .card-body {
+    background-color: #121212;
+  }
+
+  .card-title {
+    color: #7A4FD2; /* Blue for Titles */
+  }
+
+  .card-text {
+    color: #fff; /* White text */
+  }
+
+  .card-img-top {
+    border-radius: 10px;
+  }
+
+  .card-body:hover {
+    background-color: #0a0a0a;
+  }
+
+  #hero5 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.4;
+  }
+  
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    padding-top: 0;
+    animation: fadeInUp 1.5s ease-out forwards;
+  }
+  
+  .hero-content p {
+    margin-top: 20px;
+    color: #e0e0e0;
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 15px;
+  }
+
+  .hero-content .btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 28px;
+    background-color: #5c6bc0;
+    color: white;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+  }
+
+  .hero-content .btn:hover {
+    background-color: #3f51b5;
+  }
+  
+  

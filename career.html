@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Instructor Enquiry Form | Kodeo</title>
+  <link rel="icon" type="image/gif" href="logo.gif" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="career.css" rel="stylesheet">
+  <link rel="stylesheet" href="footer.css" />
+  <link rel="stylesheet" href="navbar.css" />
+  <!-- ✅ Font Awesome for Social Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <script src="script.js" defer></script>
+  <style>
+    /* Extra Mobile Responsiveness for Career Page */
+    @media (max-width: 480px) {
+      .hiring-banner {
+        padding: 120px 10px 60px !important;
+      }
+
+      .hiring-text h1 {
+        font-size: 1.8rem !important;
+        margin-bottom: 10px !important;
+      }
+
+      .hiring-text p {
+        font-size: 1rem !important;
+      }
+
+      .form-section {
+        min-height: auto !important;
+        padding: 20px 5px !important;
+      }
+
+      .form-container {
+        max-width: 90% !important;
+        margin: 20px auto !important;
+        padding: 20px 10px !important;
+        border-radius: 15px !important;
+      }
+
+      .form-container h2 {
+        font-size: 1.3rem !important;
+        text-align: center !important;
+        margin-bottom: 15px !important;
+      }
+
+      .form-group {
+        margin-bottom: 15px !important;
+      }
+
+      .form-group label {
+        font-size: 0.9rem !important;
+        margin-bottom: 5px !important;
+      }
+
+      .form-group input,
+      .form-group textarea,
+      .form-group select {
+        padding: 10px !important;
+        font-size: 0.9rem !important;
+        border-radius: 8px !important;
+      }
+
+      .relocate-options {
+        gap: 10px !important;
+        justify-content: center !important;
+      }
+
+      .relocate-option {
+        padding: 8px 15px !important;
+        font-size: 0.9rem !important;
+        border-radius: 8px !important;
+      }
+
+      button[type="submit"] {
+        width: 100% !important;
+        padding: 12px !important;
+        font-size: 0.9rem !important;
+        border-radius: 8px !important;
+      }
+
+      .footer-container {
+        flex-direction: column !important;
+        gap: 20px !important;
+        padding: 10px 5px !important;
+      }
+
+      .footer-box {
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: 100% !important;
+        margin-bottom: 10px !important;
+      }
+
+      .footer-logo {
+        width: 60px !important;
+        height: auto !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <ul class="nav-left">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./services.html">Services</a></li>
+        <li><a class="active" href="#hero">Career</a></li>
+      </ul>
+
+      <a href="index.html" class="logo">
+        <img src="logo.gif" alt="Kodeo Logo" class="logo-gif" />
+      </a>
+
+      <ul class="nav-right">
+        <li><a href="./products.html">Product</a></li>
+        <li><a href="./about_us.html">About Us</a></li>
+        <li><a href="./contact_us.html">Contact</a></li>
+      </ul>
+
+      <!-- Hamburger for Mobile -->
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+
+    <!-- Mobile menu links -->
+    <div class="mobile-menu" id="mobileMenu">
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./services.html">Services</a></li>
+        <li><a href="./career.html">Career</a></li>
+        <li><a href="./products.html">Product</a></li>
+        <li><a href="./about_us.html">About Us</a></li>
+        <li><a href="./contact_us.html">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="hiring-banner">
+    <div class="hiring-content">
+      <div class="hiring-text">
+        <h1>Join Our Innovative Team!</h1>
+        <p>We are looking for talented individuals to contribute to our success. Explore our open positions and start
+          your journey with us.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="form-section">
+    <div class="form-background"></div>
+
+    <div class="form-container">
+
+      <form id="enquiryForm" method="POST" enctype="multipart/form-data">
+        <!-- Name -->
+        <div class="form-group">
+          <label for="name">Name<span style="color:red;">*</span></label>
+          <input type="text" id="name" name="name" required />
+        </div>
+
+        <!-- Email -->
+        <div class="form-group">
+          <label for="email">Email ID<span style="color:red;">*</span></label>
+          <input type="email" id="email" name="email" required />
+        </div>
+
+        <!-- Qualification -->
+        <div class="form-group">
+          <label for="qualification">Qualification<span style="color:red;">*</span></label>
+          <input type="text" id="qualification" name="qualification" required />
+        </div>
+
+        <!-- Experience -->
+        <div class="form-group">
+          <label for="experience">Experience<span style="color:red;">*</span></label>
+          <select id="experience" name="experience" required>
+            <option value="" disabled selected>Select Experience</option>
+            <option value="0-1">0-1 Year</option>
+            <option value="1-2">1-2 Years</option>
+            <option value="2-3">2-3 Years</option>
+            <option value="3+">3+ Years</option>
+          </select>
+        </div>
+
+        <!-- Skills Description -->
+        <div class="form-group">
+          <label for="skills-text">Your Skills<span style="color:red;">*</span></label>
+          <textarea id="skills-text" name="skills-text" rows="4" required></textarea>
+        </div>
+
+        <!-- Resume Upload -->
+        <div class="form-group">
+          <label for="resume">Upload Resume<span style="color:red;">*</span></label>
+          <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required />
+        </div>
+
+        <!-- Cover Letter Upload -->
+        <div class="form-group">
+          <label for="coverLetter">Upload Cover Letter</label>
+          <input type="file" id="coverLetter" name="coverLetter" accept=".pdf,.doc,.docx" />
+        </div>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </section>
+
+
+
+  <footer>
+    <div class="footer-container">
+
+      <div class="footer-box">
+
+        <img src="logo.gif" alt="Kodeo Software Technology Logo" class="footer-logo">
+        <p>We are a skilled team delivering innovative websites, apps, and software with reliable IT solutions.</p>
+        <div class="footer-social">
+          <a href="https://fb.me/Kodeosoftwaretechnology" target="blank" class="facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://www.instagram.com/kodeosoftwaretechnology/" target="blank" class="instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://t.me/infokodeo" target="blank" class="telegram">
+            <i class="fab fa-telegram-plane"></i>
+          </a>
+          <a href="https://www.linkedin.com/company/kodeo-software-technology/?originalSubdomain=in" target="blank"
+            class="linkedin">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
+
+      </div>
+
+      <div class="footer-box">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><i class="bx bx-chevron-right"></i> <a href="./about_us.html">About US</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="./contact_us.html">Contact</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="./services.html">Services</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="./career.html">Career</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-box">
+        <h4>Our Services</h4>
+        <ul>
+          <li><i class="bx bx-chevron-right"></i> <a href="./cyber_service.html">Cyber Security</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="./aiml_service.html">Artifical Intelligence</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="./MachineLearning.html">Machine Learning</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="./web_service.html">Software Development</a></li>
+
+        </ul>
+      </div>
+
+      <div class="footer-box footer-contact">
+        <h4>Contact Us</h4>
+        <p><i class="fas fa-envelope"></i> info@kodeosoftwaretechnology.com</p>
+        <p><i class="fas fa-map-marker-alt"></i> Office no.733, Gera Imperium Rise,<br>Hinjewadi Phase 2, Pune, 411057
+        </p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Kodeo Software technology</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        Designed by Kodeo Software Technology
+      </div>
+    </div>
+    </div>
+  </footer>
+
+
+
+  <script src="career.js" defer></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const text = "WE ARE AT THE\nforefront of technology";
+      const typingElement = document.getElementById("typing-text");
+      let index = 0;
+
+      function typeEffect() {
+        if (index < text.length) {
+          typingElement.innerHTML += text.charAt(index) === "\n" ? "<br>" : text.charAt(index);
+          index++;
+          setTimeout(typeEffect, 50); // Reduce delay for smoother effect
+        }
+      }
+
+      typeEffect();
+    });
+  </script>
+
+  <style>
+    .relocate-option.selected {
+      background: #00ffff44;
+      border-color: #00ffff;
+    }
+  </style>
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("mobileMenu");
+      menu.classList.toggle("show");
+    }
+  </script>
+
+
+</body>
+
+</html>

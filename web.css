@@ -1,0 +1,550 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #0f0c1f;
+    color: #f1f1f1;
+    line-height: 1.6;
+  }
+  
+  .top-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background-color: #1a132f;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+  }
+  
+  .top-bar .logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: #a259ff;
+  }
+  
+  .top-bar nav a {
+    color: #ccc;
+    margin: 0 12px;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .top-bar nav a:hover {
+    color: #a259ff;
+  }
+  
+  .hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 60px;
+    background: linear-gradient(to right, #1a132f, #0f0c1f);
+    flex-wrap: wrap;
+  }
+  
+  .hero-content {
+    flex: 1;
+    min-width: 280px;
+    max-width: 600px;
+  }
+  
+  .hero-content h1 {
+    font-size: 48px;
+    color: #a259ff;
+    margin-bottom: 20px;
+  }
+  
+  .hero-content p {
+    font-size: 18px;
+    color: #ddd;
+    margin-bottom: 30px;
+  }
+  
+  .cta-btn {
+    display: inline-block;
+    background-color: #a259ff;
+    color: white;
+    padding: 12px 24px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .cta-btn:hover {
+    background-color: #7a3dd8;
+    transform: translateY(-2px);
+  }
+  
+  .hero-img {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .hero-img img {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    border-radius: 12px;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .hero {
+      flex-direction: column;
+      padding: 60px 20px;
+      text-align: center;
+    }
+  
+    .hero-content h1 {
+      font-size: 36px;
+    }
+  
+    .hero-content p {
+      font-size: 16px;
+    }
+  
+    .cta-btn {
+      padding: 10px 20px;
+      font-size: 14px;
+    }
+  
+    .hero-img {
+      margin-top: 30px;
+    }
+  
+    .hero-img img {
+      max-width: 300px;
+    }
+  }
+  
+  
+  
+  .content-block {
+    max-width: 700px;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .content-block h2 {
+    color: #a259ff;
+    margin-bottom: 20px;
+    font-size: 28px;
+  }
+  
+  .features {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 40px;
+    gap: 50px;
+  }
+  
+  .feature {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+  
+  .feature.reverse {
+    flex-direction: row-reverse;
+  }
+  
+  .feature img {
+    width: 180px;
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(162, 89, 255, 0.2);
+    flex-shrink: 0;
+  }
+  
+  .feature h3 {
+    font-size: 22px;
+    color: #a259ff;
+  }
+  
+  .tech-stack {
+    padding: 60px 40px;
+    text-align: center;
+  }
+  
+  .tech-stack h2 {
+    font-size: 26px;
+    color: #a259ff;
+    margin-bottom: 20px;
+  }
+  
+  .tech-stack ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 0;
+  }
+  
+  .tech-stack li {
+    background: #281e48;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 500;
+  }
+  
+  .testimonials {
+    padding: 60px 40px;
+    background: #1a132f;
+    text-align: center;
+  }
+  
+  .testimonials h2 {
+    color: #a259ff;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .testimonial {
+    background: #2c2546;
+    padding: 30px;
+    border-left: 5px solid #a259ff;
+    margin-top: 20px;
+    font-style: italic;
+    color: #ddd;
+  }
+  
+  .cta-section {
+    padding: 70px 40px;
+    text-align: center;
+    background: linear-gradient(to bottom, #1c1938, #0f0c1f);
+  }
+  
+  .cta-section h2 {
+    font-size: 26px;
+    color: #a259ff;
+    margin-bottom: 30px;
+  }
+  
+  .cta-form {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .cta-form input,
+  .cta-form textarea {
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background: #221b3a;
+    color: #fff;
+    font-size: 16px;
+  }
+  
+  .cta-form button {
+    background-color: #a259ff;
+    color: white;
+    padding: 12px;
+    border: none;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .footer {
+    background: #130d24;
+    padding: 50px 40px;
+    color: #aaa;
+  }
+  
+  .footer-cols {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+  }
+  
+  .footer-cols div h4, .footer-cols div h3 {
+    color: #a259ff;
+  }
+  
+  .footer-cols ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-cols ul li {
+    margin: 5px 0;
+  }
+  
+  .footer .copyright {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 14px;
+    color: #777;
+  }
+  .development-process {
+    padding: 40px 20px;
+    background-color: #0f0c1f;
+    color: #eee;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .development-process h2 {
+    text-align: center;
+    color: #a259ff;
+    font-size: 28px;
+    margin-bottom: 30px;
+    letter-spacing: 0.5px;
+  }
+  
+  .timeline {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+    padding-left: 30px;
+  }
+  
+  .timeline::before {
+    content: "";
+    position: absolute;
+    left: 24px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: rgba(162, 89, 255, 0.3);
+  }
+  
+  .step {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 24px;
+    position: relative;
+  }
+  
+  .circle {
+    width: 28px;
+    height: 28px;
+    background-color: #0f0c1f;
+    border: 2px solid #a259ff;
+    color: #a259ff;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  
+  .info {
+    margin-left: 45px;
+  }
+  
+  .info h3 {
+    margin: 0;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+  
+  .info p {
+    margin: 4px 0 0;
+    font-size: 13px;
+    color: #bbb;
+    line-height: 1.4;
+  }
+  
+  /* Responsive */
+  @media (max-width: 600px) {
+    .timeline {
+      padding-left: 15px;
+    }
+  
+    .circle {
+      width: 24px;
+      height: 24px;
+      font-size: 12px;
+      line-height: 20px;
+    }
+  
+    .info {
+      margin-left: 40px;
+    }
+  
+    .info h3 {
+      font-size: 15px;
+    }
+  
+    .info p {
+      font-size: 12.5px;
+    }
+  }
+  
+  /* Animation keyframes */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translateX(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Initial hidden state */
+  .animate {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-out;
+  }
+  
+  /* When in viewport */
+  .animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Optional directional animations */
+  .animate.fade-up { animation: fadeInUp 1s ease forwards; }
+  .animate.fade-left { animation: fadeInLeft 1s ease forwards; }
+  .animate.fade-right { animation: fadeInRight 1s ease forwards; }
+  
+  
+  /* General Styles for App Development Sections */
+  .app-development-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px;
+    background-color: #0f0c1f;
+    color: #f1f1f1;
+    font-family: 'Segoe UI', sans-serif;
+    gap: 40px;
+    border-bottom: 1px solid #333;
+    flex-wrap: wrap; /* Added for better responsiveness */
+  }
+  
+  .app-development-section:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+  
+  .app-content {
+    max-width: 500px;
+    flex: 1;
+  }
+  
+  .app-content h2 {
+    font-size: 28px;
+    color: #a259ff;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+  
+  .app-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #ccc;
+  }
+  
+  .app-content a {
+    color: #00ffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  .app-content a:hover {
+    color: #00cccc;
+  }
+  
+  .app-image {
+    max-width: 300px;
+    flex: 1;
+    display: flex;
+    justify-content: center; /* Center image */
+  }
+  
+  .app-image img {
+    width: 100%;
+    height: auto;
+    max-height: 250px; /* Added max height to control image scaling on mobile */
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(162, 89, 255, 0.4);
+  }
+  
+  /* Responsive Styles for Small Screens */
+  @media (max-width: 1024px) {
+    .app-development-section {
+        padding: 40px 20px; /* Reduced padding for tablets */
+        gap: 20px; /* Reduced gap for smaller screens */
+    }
+  
+    .app-content h2 {
+        font-size: 24px; /* Adjusted font size for smaller screens */
+    }
+  
+    .app-content p {
+        font-size: 15px; /* Slightly smaller font size */
+    }
+  
+    .app-image img {
+        max-width: 100%;
+        max-height: 250px; /* Ensure images don’t exceed this height */
+    }
+  }
+  
+  /* Fully responsive on mobile screens */
+  @media (max-width: 768px) {
+    .app-development-section {
+        flex-direction: column;
+        padding: 30px 10px; /* Adjusted padding for mobile */
+        text-align: center;
+    }
+  
+    .app-image {
+        margin: 20px 0;
+        max-width: 100%; /* Ensure image takes up full width */
+        justify-content: center;
+    }
+  
+    .app-content h2 {
+        font-size: 20px; /* Smaller title for better readability */
+    }
+  
+    .app-content p {
+        font-size: 14px; /* Slightly smaller paragraph text */
+    }
+  
+    .app-image img {
+        max-width: 90%; /* Limit image width */
+        height: auto; /* Maintain aspect ratio */
+        max-height: 200px; /* Limit height to prevent oversized images */
+    }
+  }

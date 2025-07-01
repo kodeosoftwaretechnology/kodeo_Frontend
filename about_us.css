@@ -1,0 +1,474 @@
+/* ===== GLOBAL STYLES ===== */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #0e0b1e; /* Dark background */
+    color: #f0f0f0;      /* Light text */
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+  h1, h2, h3, h4, h5 {
+    color: #f5f5f5;
+  }
+  p, li, span, a {
+    color: #cfcfcf;
+  }
+  a {
+    text-decoration: none;
+  }
+
+  /* === Override Bootstrap styles for Navbar safely === */
+
+/* Force navbar to not be affected by Bootstrap navbar classes */
+header {
+  background: transparent !important;
+  backdrop-filter: blur(10px) !important;
+  position: fixed !important;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  flex-wrap: wrap;
+  padding: 10px 30px !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Reset Bootstrap styles affecting links */
+.navbar a {
+  color: #a5a4a4 !important;
+  text-decoration: none !important;
+  font-weight: bold !important;
+}
+
+.navbar a:hover {
+  color: #e1bdfb !important;
+}
+
+
+  /* ===== HERO SECTION (VIDEO) ===== */
+  .hero-section {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    box-sizing: border-box; /* Add box-sizing */
+  }
+
+  /* Move padding to the content to avoid affecting section height */
+  .hero-content {
+    padding-top: 80px; /* Adjust for header height */
+  }
+
+  @media (max-width: 480px) {
+    .hero-content {
+      padding-top: 100px; /* Adjust for smaller screens if needed */
+    }
+  }
+
+  .hero-video {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+  }
+  .hero-overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.2));
+    z-index: -1;
+  }
+  .hero-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+  .hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 0;
+    color: #d1cfff;
+  }
+
+  /* ===== SECTION TITLES ===== */
+  .section-title {
+    display: inline-block;
+    border-bottom: 3px solid #9b78ff;
+    padding-bottom: 5px;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: #ffffff;
+  }
+
+  /* ===== ABOUT SECTION ===== */
+  .about-section {
+    padding: 60px 0;
+  }
+  .about-section p {
+    line-height: 1.6;
+  }
+  .about-image {
+    border-radius: 8px;
+    box-shadow: 0 8px 20px #1a1440;
+  }
+
+ /* ===== ADVANTAGES SECTION ===== */
+.advantages-section {
+  background: #1a1440;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.advantage-box {
+  background: #231b53;
+  border-radius: 8px;
+  padding: 30px;
+  margin: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.25);
+  height: 100%;
+}
+
+.advantage-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.35);
+}
+
+.advantage-box i {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #b380ff;
+}
+
+.advantage-box h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.advantage-box p {
+  color: #cfcfcf;
+  font-size: 0.95rem;
+}
+
+
+  /* Enhanced Journey Section Container */
+.journey-graph-section {
+padding: 60px 0;
+position: relative;
+/* subtle gradient behind the graph section */
+background: linear-gradient(135deg, #1a1440 20%, #2d1f65 100%);
+overflow: hidden;
+}
+
+/* Graph Container */
+.journey-graph {
+position: relative;
+display: flex;
+justify-content: space-between;
+align-items: flex-start;
+max-width: 1000px; /* Adjust as needed */
+margin: 0 auto;
+padding: 30px 0;
+}
+
+/* Horizontal connecting line */
+.journey-graph::before {
+content: '';
+position: absolute;
+top: 45px; /* Align horizontally with circles */
+left: 0;
+right: 0;
+height: 5px; /* slightly thicker line */
+background: rgba(255, 255, 255, 0.2); /* faint, more visible line color */
+margin: 0 auto;
+}
+
+/* Each milestone step container */
+.journey-step {
+position: relative;
+width: 25%; /* for four steps */
+text-align: center;
+}
+
+/* Circle for each milestone (add gradient and hover glow) */
+.circle {
+/* two-tone gradient for a stylish effect */
+background: linear-gradient(135deg, #b380ff 0%, #7d61f2 100%);
+color: #fff;
+width: 65px;
+height: 65px;
+line-height: 65px;
+font-size: 1rem;
+font-weight: 600;
+border-radius: 50%;
+margin: 0 auto 15px auto;
+box-shadow: 0 0 10px rgba(0,0,0,0.3);
+position: relative;
+z-index: 1;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Glow on hover */
+.circle:hover {
+transform: scale(1.1);
+box-shadow: 0 0 15px rgba(179,128,255, 0.8), 0 0 25px rgba(125,97,242, 0.5);
+}
+
+/* Step content styling */
+.step-content {
+color: #fff;
+margin: 0 10px;
+padding: 10px;
+}
+.step-content h5 {
+color: #b380ff;
+font-size: 1.1rem;
+margin-bottom: 8px;
+}
+.step-content p {
+font-size: 0.95rem;
+line-height: 1.5;
+color: #ddd;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+.journey-graph {
+  flex-direction: column;
+  align-items: center;
+}
+.journey-graph::before {
+  content: none; /* remove horizontal line on mobile */
+}
+.journey-step {
+  width: 100%;
+  margin-bottom: 30px;
+}
+.circle {
+  margin-bottom: 10px;
+}
+}
+  /* ===== CLIENTS SECTION - AUTO SCROLL ===== */
+  .clients-section {
+    padding: 60px 0;
+    background: #1a1440;
+    color: #fff;
+    text-align: center;
+    overflow: hidden; /* So logos don't pop out of container during scroll */
+  }
+  .clients-wrapper {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    height: 120px; /* Adjust if your logos are taller/shorter */
+    overflow: hidden;
+  }
+  /* The track that scrolls continuously */
+  .clients-track {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    animation: scrollLogos 15s linear infinite;
+  }
+  .clients-track:hover {
+    animation-play-state: paused; /* Pause scroll on hover if desired */
+  }
+  .client-logo {
+    max-width: 120px;
+    flex-shrink: 0;
+    opacity: 0.8;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  .client-logo:hover {
+    transform: scale(1.08);
+    opacity: 1;
+  }
+  @keyframes scrollLogos {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  .clients-track .client-logo-block {
+    display: flex;
+    gap: 40px;
+  }
+
+ 
+
+  /* MEDIA QUERIES */
+  @media (max-width: 768px) {
+    .hero-content h1 {
+      font-size: 2rem;
+    }
+    .hero-content p {
+      font-size: 1rem;
+    }
+    .timeline-item {
+      max-width: 100%;
+    }
+  }
+
+  /* Journey Graph Section Container */
+.journey-graph-section {
+padding: 60px 0;
+position: relative;
+background: #1a1440; /* or your preferred background color */
+}
+
+/* Title styling (optional if you already have .section-title) */
+.section-title {
+color: #fff;
+text-transform: uppercase;
+letter-spacing: 1px;
+border-bottom: 3px solid #9b78ff;
+display: inline-block;
+padding-bottom: 5px;
+}
+
+/* Graph Container */
+.journey-graph {
+position: relative;
+display: flex;
+justify-content: space-between;
+align-items: flex-start;
+margin: 0 auto;
+max-width: 1000px; /* Adjust based on your layout */
+padding: 30px 0;
+}
+
+/* Horizontal connecting line */
+.journey-graph::before {
+content: '';
+position: absolute;
+top: 45px; /* This should align horizontally with the circles */
+left: 0;
+right: 0;
+height: 4px; /* thickness of the line */
+background: rgba(255, 255, 255, 0.2); /* faint line color */
+margin: 0 auto;
+}
+
+/* Individual Step Container */
+.journey-step {
+position: relative;
+width: 25%; /* for four steps – adjust or use a different layout if more steps */
+text-align: center;
+/* Pull above line if needed, e.g., top: -10px; */
+}
+
+/* Circle for each milestone */
+.circle {
+background: #9b78ff;
+color: #fff;
+width: 60px;
+height: 60px;
+line-height: 60px;
+font-size: 1rem;
+font-weight: 600;
+border-radius: 50%;
+margin: 0 auto 15px auto; /* center the circle & add spacing below */
+box-shadow: 0 0 10px rgba(0,0,0,0.3);
+position: relative;
+z-index: 1; /* Place the circle above the line */
+}
+
+/* Step content styling */
+.step-content {
+color: #fff;
+margin: 0 10px;  /* some breathing room */
+padding: 10px;
+}
+.step-content h5 {
+color: #b380ff;
+font-size: 1.1rem;
+margin-bottom: 8px;
+}
+.step-content p {
+font-size: 0.95rem;
+line-height: 1.5;
+color: #ddd;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+.journey-graph {
+  flex-direction: column;
+  align-items: center;
+}
+.journey-graph::before {
+  content: none; /* remove horizontal line for mobile? or create a vertical layout */
+}
+.journey-step {
+  width: 100%;
+  margin-bottom: 30px;
+}
+.circle {
+  margin-bottom: 10px;
+}
+}
+
+/* clients */
+.enhanced-logo {
+    max-height: 90px;
+    object-fit: contain;
+    border-radius: 8px;
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  .enhanced-logo:hover {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+
+  .clients-track {
+    display: flex;
+    animation: scrollLogos 10s linear infinite;
+    gap: 60px;
+    padding: 10px 0;
+  }
+
+  @keyframes scrollLogos {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  /* ====== About Section Video Container ====== */
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 280px; /* Adjust to your desired height for rectangular video */
+  overflow: hidden;
+  margin-top: 15px;
+}
+
+.about-video {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-position: center;
+}

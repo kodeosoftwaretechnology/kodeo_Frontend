@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kodeo Software Technologies - Services</title>
+  <link rel="icon" type="image/gif" href="logo.gif" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="services.css">
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="script.js" defer></script>
+</head>
+
+<!-- Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<body>
+  <!-- Services Header Section -->
+  <!-- <section class="services-header">
+    <h1>Crafting Technology Excellence</h1>
+    <p>Want to build a robust and cost-effective Digital Product to match your business goals? Let's work together!</p>
+    <a href="#requestProposal" class="btn">Request a Proposal</a>
+  </section> -->
+
+  <!-- ======= Header ======= -->
+  <header>
+    <nav class="navbar">
+      <ul class="nav-left">
+
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./services.html">Services</a></li>
+        <li><a href="./career.html">Career</a></li>
+      </ul>
+
+      <a href="index.html" class="logo">
+        <img src="logo.gif" alt="Kodeo Logo" class="logo-gif" />
+      </a>
+
+      <ul class="nav-right">
+        <li><a href="./products.html">Products</a></li>
+        <li><a href="./about_us.html">About Us</a></li>
+        <li><a href="./contact_us.html">Contact</a></li>
+      </ul>
+
+      <!-- Hamburger for Mobile -->
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+
+    <!-- Mobile menu links -->
+    <div class="mobile-menu" id="mobileMenu">
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./services.html">Services</a></li>
+        <li><a href="./career.html">Career</a></li>
+        <li><a href="./products.html">Product</a></li>
+        <li><a href="./about_us.html">About Us</a></li>
+        <li><a href="./contact_us.html">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+  <!-- ======= Hero Section with Video Background ======= -->
+  <section class="hero-section">
+    <!-- Video element -->
+    <video class="hero-video" autoplay muted loop playsinline>
+      <source src="./hero1.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <!-- Dark Overlay -->
+    <div class="hero-overlay"></div>
+    <!-- Hero Content -->
+    <div class="hero-content" data-aos="fade-up">
+      <h1>Crafting Technology Excellence</h1>
+      <p>Want to build a robust and cost-effective Digital Product to match your business goals? Let's work together!
+      </p>
+      <a href="#requestProposal" class="btn">Request a Proposal</a>
+    </div>
+  </section>
+
+  <style>
+    /* ======= General Styles ======= */
+    /* ======= General Styles ======= */
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #0e0b1e;
+      /* Dark background */
+      color: #f0f0f0;
+      /* Light text */
+      margin: 0;
+      padding: 0;
+    }
+
+    /* ======= Header Section ======= */
+    header {
+      background: transparent !important;
+      backdrop-filter: blur(10px) !important;
+      position: fixed !important;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    .navbar {
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+      flex-wrap: wrap;
+      padding: 10px 30px !important;
+      background: transparent !important;
+      box-shadow: none !important;
+    }
+
+    /* Reset Bootstrap styles affecting links */
+    .navbar a {
+      color: #a5a4a4 !important;
+      text-decoration: none !important;
+      font-weight: bold !important;
+    }
+
+    .navbar a:hover {
+      color: #e1bdfb !important;
+    }
+
+    /* ======= Hero Section with Video Background ======= */
+    .hero-section {
+      position: relative;
+      height: 100vh;
+      /* Changed from 60vh to 100vh for full-screen view */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .hero-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2));
+      z-index: -1;
+    }
+
+    .hero-content {
+      z-index: 2;
+      color: #fff;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+
+    }
+
+    .hero-content h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: #fff;
+
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      color: #d1cfff;
+    }
+
+    /* ===== Fix hero overlap under fixed header ===== */
+    .hero-section {
+      padding-top: 100px;
+      /* space for the fixed header */
+    }
+
+    @media (max-width: 768px) {
+      .hero-section {
+        padding-top: 120px;
+        /* more space for mobile header */
+      }
+    }
+
+    .hero-content .btn {
+      background-color: #5c6bc0;
+      color: white;
+      padding: 14px 30px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: background-color 0.3s ease;
+    }
+
+    .hero-content .btn:hover {
+      background-color: #3f51b5;
+    }
+
+    /* ======= Responsive Fix for Smaller Devices ======= */
+    @media (max-width: 768px) {
+      .navbar {
+        justify-content: center;
+        padding: 10px 15px !important;
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+
+    /* ======= Extra Responsiveness for Very Small Devices ======= */
+    @media (max-width: 480px) {
+      .hero-content h1 {
+        font-size: 2rem;
+        margin-bottom: 15px;
+      }
+
+      .hero-content p {
+        font-size: 1rem;
+        margin-bottom: 20px;
+      }
+
+      .hero-content .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+      }
+
+      .navbar {
+        padding: 10px 15px !important;
+      }
+    }
+
+    /* --- Extra Mobile Responsiveness for Service Cards --- */
+    @media (max-width: 480px) {
+      .services-container {
+        padding: 20px 10px !important;
+      }
+
+      .service-cards {
+        gap: 16px !important;
+        padding: 0 !important;
+      }
+
+      .service-card {
+        
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: 90% !important;
+        height: auto !important;
+        padding: 18px 8px !important;
+      }
+
+      .service-card img {
+        width: 48px !important;
+        height: 48px !important;
+        margin-bottom: 10px !important;
+      }
+
+      .service-card h3 {
+        font-size: 1rem !important;
+      }
+
+      .service-card p {
+        font-size: 0.9rem !important;
+      }
+
+      .technology-stack {
+        padding: 20px 10px !important;
+      }
+
+      .tech-icons {
+        gap: 10px !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+      }
+
+      .tech-icons img {
+        width: 32px !important;
+        height: 32px !important;
+      }
+
+      .industries-we-serve {
+        padding: 20px 10px !important;
+      }
+
+      .industry-icons {
+        gap: 10px !important;
+        grid-template-columns: 1fr !important;
+        padding: 0 !important;
+      }
+
+      .industry-item {
+        padding: 10px 0 !important;
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: 100% !important;
+      }
+
+      .industry-item img {
+        width: 36px !important;
+        height: 36px !important;
+      }
+
+      .industry-item p {
+        font-size: 0.9rem !important;
+      }
+
+      .faq-section {
+        padding: 20px 10px !important;
+      }
+
+      .faq-container {
+        padding: 0 2px !important;
+      }
+
+      .footer-container {
+        flex-direction: column !important;
+        gap: 20px !important;
+        padding: 10px 5px !important;
+      }
+
+      .footer-box {
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: 100% !important;
+        margin-bottom: 10px !important;
+      }
+
+      .footer-logo {
+        width: 60px !important;
+        height: auto !important;
+      }
+    }
+  </style>
+
+
+  <!-- Services Section -->
+  <!-- Services Section -->
+  <section class="services-container">
+    <h2>Our Services</h2>
+    <div class="service-cards">
+      <!-- Existing Service Cards -->
+      <div class="service-card" data-service="cyberSecurity" onclick="showServiceDetails(this)">
+        <img src="assets/img/Images/SEVICES1.jpg" alt="Cyber Security">
+        <h3>Cyber Security</h3>
+        <p>Protect your business with advanced security solutions</p>
+      </div>
+      <div class="service-card" data-service="aiAndML" onclick="showServiceDetails(this)">
+        <img src="assets/img/Images/SERVICES2.jpg" alt="AI & Machine Learning">
+        <h3>Artifical Intelligence</h3>
+        <p>Innovative AI and ML solutions for business intelligence</p>
+      </div>
+      <!-- New Service Cards -->
+      <div class="service-card" data-service="machineLearning" onclick="showServiceDetails(this)">
+        <img src="assets/img/Images/S23.jpg" alt="Machine Learning">
+        <h3>Machine Learning</h3>
+        <p>Leverage advanced algorithms and data to drive smarter business decisions</p>
+      </div>
+      <div class="service-card" data-service="softwareDevelopment" onclick="showServiceDetails(this)">
+        <img src="assets/img/Images/SOFTWARE.jpg" alt="Software Development">
+        <h3>Software Development</h3>
+        <p>Custom software solutions designed to meet your business requirements</p>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Technology Stack Section -->
+  <section class="technology-stack">
+    <h2>Technology Stack</h2>
+    <div class="tech-icons">
+      <img src="./icons/reactjs.svg" alt="React">
+      <img src="./icons/nodejs.svg" alt="Node.js">
+      <img src="./icons/mongodb.svg" alt="MongoDB">
+      <img src="./icons/angular.svg" alt="Angular">
+      <img src="./icons/python.svg" alt="Python">
+      <img src="./icons/php.svg" alt="PHP">
+      <img src="./icons/flutter.svg" alt="Flutter">
+      <img src="./icons/googlecloud.svg" alt="Google Cloud">
+      <img src="./icons/ios.svg" alt="iOS">
+      <img src="./icons/magento.svg" alt="Magento">
+      <img src="./icons/selenium.svg" alt="Selenium">
+      <img src="./icons/firebase.svg" alt="Firebase">
+      <img src="./icons/html5.svg" alt="HTML5">
+      <img src="./icons/reactnative.svg" alt="React Native">
+      <img src="./icons/vuejs.svg" alt="Vue.js">
+      <img src="./icons/xamarin.svg" alt="Xamarin">
+      <img src="./icons/android.svg" alt="Android">
+      <img src="./icons/swift.svg" alt="Swift">
+      <img src="./icons/kotlin.svg" alt="Kotlin">
+      <img src="./icons/objectivec.svg" alt="Objective-C">
+    </div>
+  </section>
+
+  <!-- Industries We Serve Section -->
+  <section class="industries-we-serve">
+    <h2>Industries We Serve</h2>
+    <p>We're an experienced app development firm that helps in creating exceptional digital experiences across
+      industries. You name it, we build it.</p>
+    <div class="industry-icons">
+      <div class="industry-item">
+        <img src="./icons/healthcare.svg" alt="Healthcare">
+        <p>Healthcare</p>
+      </div>
+      <div class="industry-item">
+        <img src="./icons/enterprise.svg" alt="Enterprise">
+        <p>Enterprise</p>
+      </div>
+      <div class="industry-item">
+        <img src="./icons/education.svg" alt="Education">
+        <p>Education</p>
+      </div>
+      <div class="industry-item">
+        <img src="./icons/fintech.svg" alt="Fintech">
+        <p>Fintech</p>
+      </div>
+      <!-- <div class="industry-item">
+        <img src="./icons/manufacturing.svg" alt="Manufacturing">
+        <p>Manufacturing</p>
+        </div>
+    <div class="industry-item">
+        <img src="./icons/media-entertainment.svg" alt="Media & Entertainment">
+        <p>Media & Entertainment</p>
+    </div>
+  -->
+      <div class="industry-item">
+        <img src="./icons/retails-ecommerce.svg" alt="Retail & Ecommerce">
+        <p>Retail & Ecommerce</p>
+      </div>
+      <!-- <div class="industry-item">
+        <img src="./icons/telecommunication.svg" alt="Telecom">
+        <p>Telecom</p>
+    </div> -->
+      <div class="industry-item">
+        <img src="./icons/transportation-logistics.svg" alt="Transport & Logistics">
+        <p>Transport & Logistics</p>
+      </div>
+      <div class="industry-item">
+        <img src="./icons/travel-hospitality.svg" alt="Travel & Hospitality">
+        <p>Travel & Hospitality</p>
+      </div>
+      <!-- <div class="industry-item">
+        <img src="./icons/social-networking.svg" alt="Social Networking">
+        <p>Social Networking</p>
+    </div> -->
+      <div class="industry-item">
+        <img src="./icons/on-demand.svg" alt="On Demand Apps">
+        <p>On Demand Apps</p>
+      </div>
+      <div class="industry-item">
+        <img src="./icons/venue-booking.svg" alt="Venue Booking">
+        <p>Venue Booking</p>
+      </div>
+      <div class="industry-item">
+        <img src="./icons/iot.svg" alt="IoT">
+        <p>IoT</p>
+      </div>
+      <div class="industry-item">
+        <img src="./icons/chatbot.svg" alt="Chatbots">
+        <p>Chatbots</p>
+      </div>
+      <div class="industry-item">
+        <img src="./icons/erp-crm.svg" alt="ERP/CRM">
+        <p>ERP/CRM</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= FAQ Section ======= -->
+  <section class="faq-section">
+    <h2 class="section-title">FAQs</h2>
+    <div class="faq-container">
+      <div class="faq-item">
+        <button class="faq-toggle">
+          <span>What about the Intellectual Property of my idea?</span>
+          <i class="fas fa-chevron-down"></i>
+        </button>
+        <div class="faq-content">
+          <p>First, we sign an NDA to keep your idea confidential. Second, we do hand over the source code of the
+            application after deployment on the app stores.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-toggle">
+          <span>Do you have flexible engagement models?</span>
+          <i class="fas fa-chevron-down"></i>
+        </button>
+        <div class="faq-content">
+          <p>Yes, we offer different engagement models based on the project size, timelines, and client requirements.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-toggle">
+          <span>Will I be getting regular updates about my project?</span>
+          <i class="fas fa-chevron-down"></i>
+        </button>
+        <div class="faq-content">
+          <p>Yes, we provide regular updates and progress reports to ensure transparency and keep you involved
+            throughout the project.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-toggle">
+          <span>What are the core competencies of Geekyworks?</span>
+          <i class="fas fa-chevron-down"></i>
+        </button>
+        <div class="faq-content">
+          <p>Our core competencies include mobile app development, web development, digital marketing, and software
+            solutions tailored to meet business needs.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-toggle">
+          <span>Do you follow Agile process?</span>
+          <i class="fas fa-chevron-down"></i>
+        </button>
+        <div class="faq-content">
+          <p>Yes, we follow Agile methodologies for effective project management and timely delivery.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-toggle">
+          <span>What are the distinguishing features of Geekyworks services?</span>
+          <i class="fas fa-chevron-down"></i>
+        </button>
+        <div class="faq-content">
+          <p>We offer a client-centric approach, innovative solutions, a dedicated team, and a focus on quality and
+            customer satisfaction.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= FAQ Section CSS ======= -->
+  <style>
+    .faq-section {
+      background-color: #1a1a2e;
+      /* Dark background */
+      color: #f0f0f0;
+      /* Light text color */
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .faq-section .section-title {
+      color: #b380ff;
+      font-size: 36px;
+      margin-bottom: 30px;
+    }
+
+    .faq-container {
+      max-width: 900px;
+      margin: auto;
+      text-align: left;
+    }
+
+    .faq-item {
+      margin-bottom: 20px;
+      border-radius: 8px;
+      background-color: #23254d;
+      /* Slightly lighter than the main background */
+    }
+
+    .faq-toggle {
+      width: 100%;
+      padding: 20px;
+      background-color: #1f2141;
+      /* Darker background for the toggle */
+      border: none;
+      color: #fff;
+      font-size: 1.1rem;
+      text-align: left;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background-color 0.3s ease;
+    }
+
+    .faq-toggle:hover {
+      background-color: #3f4d8c;
+      /* Slight hover effect */
+    }
+
+    .faq-content {
+      padding: 20px;
+      background-color: #2b2d56;
+      /* Darker color for content */
+      color: #cfcfcf;
+      display: none;
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+    }
+
+    .faq-toggle i {
+      transition: transform 0.3s ease;
+    }
+
+    .faq-toggle.open i {
+      transform: rotate(180deg);
+      /* Rotate the icon when open */
+    }
+
+    .faq-item.open .faq-content {
+      display: block;
+    }
+
+    .faq-item.open .faq-toggle {
+      background-color: #3f4d8c;
+      /* Change background when open */
+    }
+
+    /* ======= Responsive Adjustments ======= */
+    @media (max-width: 768px) {
+      .faq-section {
+        padding: 30px 15px;
+      }
+
+      .faq-section .section-title {
+        font-size: 30px;
+        margin-bottom: 25px;
+      }
+
+      .faq-toggle {
+        padding: 15px;
+        font-size: 1rem;
+      }
+
+      .faq-content {
+        padding: 15px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .faq-section {
+        padding: 20px 10px;
+      }
+
+      .faq-section .section-title {
+        font-size: 26px;
+        margin-bottom: 20px;
+      }
+
+      .faq-toggle {
+        padding: 12px;
+        font-size: 0.9rem;
+      }
+
+      .faq-content {
+        padding: 12px;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+
+
+  <!-- ======= FAQ Section JavaScript ======= -->
+  <script>
+    const faqToggles = document.querySelectorAll('.faq-toggle');
+
+    faqToggles.forEach(toggle => {
+      toggle.addEventListener('click', () => {
+        const faqItem = toggle.closest('.faq-item');
+        faqItem.classList.toggle('open');
+      });
+    });
+  </script>
+
+
+  <!-- ======= Footer ======= -->
+
+
+  <footer>
+    <div class="footer-container">
+
+      <div class="footer-box">
+
+        <img src="logo.gif" alt="Kodeo Software Technology Logo" class="footer-logo">
+        <p>We are a skilled team delivering innovative websites, apps, and software with reliable IT solutions.</p>
+        <div class="footer-social">
+          <a href="https://fb.me/Kodeosoftwaretechnology" target="blank" class="facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://www.instagram.com/kodeosoftwaretechnology/" target="blank" class="instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://t.me/infokodeo" target="blank" class="telegram">
+            <i class="fab fa-telegram-plane"></i>
+          </a>
+          <a href="https://www.linkedin.com/company/kodeo-software-technology/?originalSubdomain=in" target="blank"
+            class="linkedin">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
+
+      </div>
+
+      <div class="footer-box">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><i class="bx bx-chevron-right"></i> <a href="./about_us.html">About US</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="./contact_us.html">Contact</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="./services.html">Services</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="./career.html">Career</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-box">
+        <h4>Our Services</h4>
+        <ul>
+          <li><i class="bx bx-chevron-right"></i> <a href="./cyber_service.html">Cyber Security</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="./aiml_service.html">Artifical Intelligence</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="./MachineLearning.html">Machine Learning</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="./web_service.html">Software Development</a></li>
+
+        </ul>
+      </div>
+
+      <div class="footer-box footer-contact">
+        <h4>Contact Us</h4>
+        <p><i class="fas fa-envelope"></i> info@kodeosoftwaretechnology.com</p>
+        <p><i class="fas fa-map-marker-alt"></i> Office no.733, Gera Imperium Rise,<br>Hinjewadi Phase 2, Pune, 411057
+        </p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Kodeo Software technology</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        Designed by Kodeo Software Technology
+      </div>
+    </div>
+    </div>
+  </footer>
+
+
+
+
+  <script>
+    AOS.init({ once: true });
+  </script>
+  <script>
+
+    // Hide navbar on scroll down
+    let lastScrollTop = 0;
+    const header = document.querySelector("header");
+
+    window.addEventListener("scroll", function () {
+      let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      if (scrollTop > lastScrollTop) {
+        header.classList.add("hidden");
+      } else {
+        header.classList.remove("hidden");
+      }
+      lastScrollTop = scrollTop;
+    });
+  </script>
+
+
+  <script>
+    function showServiceDetails(service) {
+      alert(`You clicked on the ${service} service! You can display detailed information about ${service} here.`);
+    }
+
+    function showIndustryDetails(industry) {
+      alert(`You clicked on the ${industry} industry! You can display detailed information about ${industry} here.`);
+    }
+
+    function showServiceDetails(serviceCard) {
+      // Get the value of the data-service attribute from the clicked card
+      const service = serviceCard.getAttribute("data-service");
+
+      // Mapping of services to corresponding URLs (you can add or modify the service pages as required)
+      const servicePages = {
+        "cyberSecurity": "cyber_service.html",
+        "aiAndML": "aiml_service.html",
+        "machineLearning": "MachineLearning.html",
+        "softwareDevelopment": "web_service.html",
+
+      };
+
+      // Check if the selected service exists in the mapping and redirect to the correct page
+      if (servicePages[service]) {
+        window.location.href = servicePages[service]; // Redirect to the corresponding page
+      } else {
+        console.error("Service not found: " + service);
+      }
+    }
+
+  </script>
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("mobileMenu");
+      menu.classList.toggle("show");
+    }
+  </script>
+  <script>
+    const menuLinks = document.querySelectorAll('.mobile-menu a');
+    menuLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('mobileMenu').classList.remove('show');
+      });
+    });
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,259 @@
+footer {
+    background: #181818; /* Dark background */
+    color: #f4f4f4; /* Light text color */
+    padding: 40px 15px 20px;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.1); /* Subtle glow */
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Container */
+.footer-container {
+    display: flex;
+    justify-content: space-between; /* Spread items across the row */
+    align-items: center; /* Vertically center items */
+    gap: 2rem; /* Space between sections */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: left; /* Align text to the left */
+}
+
+/* Box */
+.footer-box {
+    width: 100%;
+    max-width: 320px;
+}
+
+.footer-box h4 {
+    color: #ffffff; /* White text */
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.3); /* Neon glow effect */
+}
+
+.footer-box p,
+.footer-contact p,
+.footer-box ul li a {
+    font-size: 0.9rem;
+    color: #cccccc; /* Light gray text */
+    line-height: 1.6;
+}
+
+/* Links */
+.footer-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-box ul li {
+    margin-bottom: 10px;
+}
+
+.footer-box ul li a {
+    color: #00ffff; /* Neon blue */
+    text-decoration: none;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+.footer-box ul li a:hover {
+    color: #ff00ff; /* Neon pink on hover */
+    text-shadow: 0 0 10px rgba(255, 0, 255, 0.8); /* Neon glow effect */
+}
+
+/* Contact */
+.footer-contact {
+    margin-bottom: 40px; /* Add gap between Contact Us and other sections */
+}
+.footer-contact p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    transition: color 0.3s;
+}
+
+.footer-contact p #location{
+    margin-right: 25px;
+}
+
+
+.footer-contact i {
+    color: #00ffff; /* Neon blue for icons */
+    font-size: 1.2rem;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.footer-contact p:hover {
+    color: #ffffff; /* Change text color on hover */
+}
+
+.footer-contact p:hover i {
+    color: #ff00ff; /* Neon pink */
+    transform: scale(1.2); /* Icon zoom effect */
+}
+
+.footer-contact p a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-contact p a:hover {
+    color: #00ffff; /* Neon blue on hover */
+    text-decoration: underline;
+}
+
+/* Social */
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.footer-social a {
+    color: #00ffff; /* Neon blue */
+    font-size: 1.4rem;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.footer-social a:hover {
+    color: #ff00ff; /* Neon pink */
+    transform: scale(1.3); /* Social icon zoom effect */
+}
+
+/* Logo */
+.footer-logo {
+    width: 150px;
+    margin: 0 auto;
+}
+
+/* Bottom */
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    font-size: 0.8rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Light border */
+    color: #cccccc; /* Light gray */
+}
+
+.footer-bottom a {
+    color: #00ffff; /* Neon blue for bottom links */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-bottom a:hover {
+    color: #ff00ff; /* Neon pink on hover */
+    text-decoration: underline;
+}
+
+/* Add margin-top to the "Our Services" section */
+.footer-box:nth-child(3) {
+    margin-top: -10px; /* Adjust the value as needed */
+}
+.footer-box:nth-child(4) {
+    margin-top: -20px; /* Adjust the value as needed */
+}
+
+
+/* Mobile (max-width: 600px) */
+@media (max-width: 600px) {
+    .footer-container {
+        flex-direction: column; /* Stack items vertically */
+        gap: rem; /* Adjust space between sections */
+        padding: 20px;
+        text-align: center;
+    }
+
+    .footer-box {
+        max-width: 100%; /* Full width on smaller screens */
+        text-align: center; /* Center text for mobile */
+    }
+
+    .footer-social {
+        gap: 10px; /* Adjust social icon spacing */
+    }
+
+    .footer-contact p {
+        flex-direction: column; /* Stack the contact info vertically */
+        align-items: center;
+        gap: 8px;
+    }
+
+  
+    .footer-box h4 {
+        font-size: 1.1rem; /* Slightly smaller text for mobile */
+    }
+
+    .footer-logo {
+        width: 120px; /* Adjust logo size for mobile */
+    }
+
+    .footer-contact p a {
+        font-size: 1rem; /* Increase font size for touch screens */
+    }
+}
+/* Adjust for mobile responsiveness */
+@media (max-width: 600px) {
+    .footer-contact p {
+        flex-direction: column; /* Stack contact details vertically */
+        align-items: center; /* Center everything */
+        justify-content: center;
+        gap: 10px; /* More space between items */
+        text-align: center; /* Center the text */
+        margin-top: 20px; /* Push the section slightly down */
+    }
+
+    /* Adjust icon size and positioning */
+    .footer-contact i {
+        left: -40px; /* Move icon further left */
+        font-size: 1.5rem; /* Make the icon slightly bigger */
+    }
+
+    .footer-contact p a {
+        font-size: 1.1rem; /* Increase font size for better readability */
+    }
+}
+/* Tablet (max-width: 768px) */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* Stack items vertically */
+        gap: 2rem; /* More space between sections */
+    }
+
+    .footer-box h4 {
+        font-size: 1.2rem; /* Slightly larger text for tablets */
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+
+    .footer-contact p {
+        justify-content: center;
+    }
+}
+
+/* Large screens (min-width: 1024px) */
+@media (min-width: 1024px) {
+    footer {
+        padding: 60px 30px 30px;
+    }
+
+    .footer-container {
+        gap: 4rem;
+    }
+
+    .footer-box h4 {
+        font-size: 1.3rem; /* Larger heading text on larger screens */
+    }
+
+    .footer-social {
+        justify-content: flex-start;
+    }
+}
